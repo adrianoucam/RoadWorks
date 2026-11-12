@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<additional><rerouter id="events" edges="AB BC BD DC"><interval begin="300" end="1200"><closingLaneReroute id="BC_0" disallow="all" /></interval></rerouter></additional>

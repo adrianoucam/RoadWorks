@@ -1,0 +1,36 @@
+[
+  {
+    "urbanEdge": "AB",
+    "osmWay": null,
+    "sumoEdge": "AB",
+    "sumoLanes": [
+      "AB_0",
+      "AB_1"
+    ]
+  },
+  {
+    "urbanEdge": "BC",
+    "osmWay": null,
+    "sumoEdge": "BC",
+    "sumoLanes": [
+      "BC_0",
+      "BC_1"
+    ]
+  },
+  {
+    "urbanEdge": "BD",
+    "osmWay": null,
+    "sumoEdge": "BD",
+    "sumoLanes": [
+      "BD_0"
+    ]
+  },
+  {
+    "urbanEdge": "DC",
+    "osmWay": null,
+    "sumoEdge": "DC",
+    "sumoLanes": [
+      "DC_0"
+    ]
+  }
+]

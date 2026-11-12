@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<edges><edge id="AB" from="A" to="B" numLanes="2" speed="11.11111111111111" length="410" allow="passenger bus truck" /><edge id="BC" from="B" to="C" numLanes="2" speed="11.11111111111111" length="410" allow="passenger bus truck" /><edge id="BD" from="B" to="D" numLanes="1" speed="11.11111111111111" length="340" allow="passenger bus truck" /><edge id="DC" from="D" to="C" numLanes="1" speed="11.11111111111111" length="530" allow="passenger bus truck" /></edges>

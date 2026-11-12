@@ -1,0 +1,32 @@
+{
+  "schema": "roadworks-urban-sumo-result/1.7",
+  "executed": true,
+  "calibrated": false,
+  "reviewRequired": true,
+  "inputSHA256": "74fef6c3242ffe36023d29c194ecd5926f2ff37a94ea636229b709a318ec3b09",
+  "warnings": [
+    "Rede georreferenciada com faixas e conexões derivadas; revisar no netedit. Não calibrada.",
+    "Semáforos manuais permissivos, sem fases de amarelo ou verificação de conflitos.",
+    "Capacidade por faixa e armazenamento do modelo mesoscópico não são parâmetros equivalentes do SUMO."
+  ],
+  "baseline": {
+    "offered": 2,
+    "unroutedAtDeparture": 0,
+    "insertable": 2,
+    "arrived": 2,
+    "pendingIncludingUnrouted": 0,
+    "meanDurationSeconds": 8.5,
+    "meanWaitingSeconds": 0.0,
+    "maxHaltingVehicles": 0
+  },
+  "alternative": {
+    "offered": 2,
+    "unroutedAtDeparture": 0,
+    "insertable": 2,
+    "arrived": 2,
+    "pendingIncludingUnrouted": 0,
+    "meanDurationSeconds": 8.5,
+    "meanWaitingSeconds": 0.0,
+    "maxHaltingVehicles": 0
+  }
+}

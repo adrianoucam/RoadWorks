@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration><input><net-file value="network.net.xml" /><route-files value="routes.rou.xml" /><additional-files value="events.add.xml" /></input><time><end value="300" /></time></configuration>

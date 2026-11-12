@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes><vType id="car" vClass="passenger" length="5" minGap="2.5" accel="2.0" decel="4.5" sigma="0.5" /><vType id="bus" vClass="bus" length="12" minGap="2.5" accel="2.0" decel="4.5" sigma="0.5" /><vType id="truck" vClass="truck" length="12" minGap="2.5" accel="2.0" decel="4.5" sigma="0.5" /><vehicle id="v1" type="car" depart="29" departLane="best"><route edges="w27458928.1.f" /></vehicle><vehicle id="v2" type="car" depart="59" departLane="best"><route edges="w27458928.1.f" /></vehicle></routes>

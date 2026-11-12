@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<net xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="-694056.65,2534150.51" convBoundary="0.00,0.00,820.75,337.52" origBoundary="-43.108000,-22.904000,-43.100000,-22.901000" projParameter="+proj=utm +zone=23 +ellps=WGS84 +datum=WGS84 +units=m +no_defs" />
+
+    <edge id=":B_0" function="internal">
+        <lane id=":B_0_0" index="0" allow="passenger bus truck" speed="11.11" length="11.20" shape="406.31,0.54 417.51,0.40" />
+    </edge>
+    <edge id=":B_1" function="internal">
+        <lane id=":B_1_0" index="0" allow="passenger bus truck" speed="7.33" length="11.73" shape="406.31,0.54 408.77,1.06 410.54,2.69 411.62,5.42 412.02,9.27" />
+    </edge>
+    <edge id=":B_2" function="internal">
+        <lane id=":B_2_0" index="0" allow="passenger bus truck" speed="11.11" length="11.20" shape="406.35,3.74 417.55,3.60" />
+    </edge>
+    <edge id=":B_3" function="internal">
+        <lane id=":B_3_0" index="0" allow="passenger bus truck" speed="6.51" length="9.03" shape="406.35,3.74 408.80,4.06 410.57,5.09 411.64,6.82 412.02,9.27" />
+    </edge>
+    <edge id=":D_0" function="internal">
+        <lane id=":D_0_0" index="0" allow="passenger bus truck" speed="4.04" length="4.32" shape="416.16,330.79 416.34,332.13 416.84,332.77 417.65,332.73 418.79,332.00" />
+    </edge>
+
+    <edge id="AB" from="A" to="B" priority="-1" length="410.00">
+        <lane id="AB_0" index="0" allow="passenger bus truck" speed="11.11" length="410.00" shape="-0.06,5.77 406.31,0.54" />
+        <lane id="AB_1" index="1" allow="passenger bus truck" speed="11.11" length="410.00" shape="-0.02,8.97 406.35,3.74" />
+    </edge>
+    <edge id="BC" from="B" to="C" priority="-1" length="410.00">
+        <lane id="BC_0" index="0" allow="passenger bus truck" speed="11.11" length="410.00" shape="417.51,0.40 814.10,-4.71" />
+        <lane id="BC_1" index="1" allow="passenger bus truck" speed="11.11" length="410.00" shape="417.55,3.60 814.14,-1.51" />
+    </edge>
+    <edge id="BD" from="B" to="D" priority="-1" length="340.00">
+        <lane id="BD_0" index="0" allow="passenger bus truck" speed="11.11" length="340.00" shape="412.02,9.27 416.16,330.79" />
+    </edge>
+    <edge id="DC" from="D" to="C" priority="-1" length="530.00">
+        <lane id="DC_0" index="0" allow="passenger bus truck" speed="11.11" length="530.00" shape="418.79,332.00 815.53,2.25" />
+    </edge>
+
+    <junction id="A" type="dead_end" x="0.00" y="10.57" incLanes="" intLanes="" shape="0.00,10.57 -0.08,4.17" />
+    <junction id="B" type="priority" x="410.37" y="5.29" incLanes="AB_0 AB_1" intLanes=":B_0_0 :B_1_0 :B_2_0 :B_3_0" shape="410.42,9.29 413.62,9.25 414.04,7.02 414.58,6.24 415.35,5.67 416.35,5.32 417.57,5.20 417.49,-1.20 406.29,-1.06 406.37,5.34 408.60,5.76 409.38,6.30 409.95,7.07 410.29,8.07">
+        <request index="0" response="0000" foes="0000" cont="0" />
+        <request index="1" response="0100" foes="1100" cont="0" />
+        <request index="2" response="0000" foes="0010" cont="0" />
+        <request index="3" response="0010" foes="0010" cont="0" />
+    </junction>
+    <junction id="C" type="dead_end" x="820.75" y="0.00" incLanes="BC_0 BC_1 DC_0" intLanes="" shape="814.08,-6.31 814.16,0.08 814.87,0.18 815.00,0.31 814.99,0.49 814.82,0.73 814.51,1.02 816.56,3.49 819.83,0.44 821.62,-2.04 821.95,-3.96 820.80,-5.31 818.18,-6.09" />
+    <junction id="D" type="priority" x="414.65" y="337.52" incLanes="BD_0" intLanes=":D_0_0" shape="419.81,333.23 417.76,330.77 414.56,330.81 415.18,334.06 415.92,334.77 416.93,334.87 418.23,334.36">
+        <request index="0" response="0" foes="0" cont="0" />
+    </junction>
+
+    <connection from="AB" to="BC" fromLane="0" toLane="0" via=":B_0_0" dir="s" state="M" />
+    <connection from="AB" to="BD" fromLane="0" toLane="0" via=":B_1_0" dir="l" state="m" />
+    <connection from="AB" to="BC" fromLane="1" toLane="1" via=":B_2_0" dir="s" state="M" />
+    <connection from="AB" to="BD" fromLane="1" toLane="0" via=":B_3_0" dir="l" state="m" />
+    <connection from="BD" to="DC" fromLane="0" toLane="0" via=":D_0_0" dir="r" state="M" />
+
+    <connection from=":B_0" to="BC" fromLane="0" toLane="0" dir="s" state="M" />
+    <connection from=":B_1" to="BD" fromLane="0" toLane="0" dir="l" state="M" />
+    <connection from=":B_2" to="BC" fromLane="0" toLane="1" dir="s" state="M" />
+    <connection from=":B_3" to="BD" fromLane="0" toLane="0" dir="l" state="M" />
+    <connection from=":D_0" to="DC" fromLane="0" toLane="0" dir="r" state="M" />
+
+</net>
