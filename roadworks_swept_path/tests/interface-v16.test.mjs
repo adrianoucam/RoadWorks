@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');const app=readFileSync(new URL('../src/app.mjs',import.meta.url),'utf8');
+test('Controles v1.6 disponíveis e sem ids duplicados',()=>{const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length);for(const id of ['trafficEngineeringPanel','teHierarchyRun','teAnalyze','teHistory','teCSV','teJSON','teControl','tePed','teBuses','teDetour','teCapacityFactor'])assert.ok(ids.includes(id),id)});
+test('Navegação, JSON e recuperação do projeto integram v1.6',()=>{assert.match(app,/trafficEngineeringV16:/);assert.match(app,/trafficEngineeringScenarios=/);assert.match(app,/renderTrafficEngineeringHistory\(\)/);assert.match(app,/trafficeng:'19 \/'/);assert.match(app,/roadworks-swept-path\/1\.6/)});

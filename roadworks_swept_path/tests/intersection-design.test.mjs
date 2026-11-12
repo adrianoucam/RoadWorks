@@ -1,0 +1,21 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {classifyMovement,circularFillet,designLaneTurn,checkDesignVehicle,directedLane,laneDirections,lineCrossing,checkIntersectionFootprint} from '../src/intersection-design.mjs';
+const p=(x,y)=>({x,y});const section={lanesPerDirection:1,laneWidth:3.5,shoulderLeft:1,shoulderRight:1,median:0};
+const xRoad=[p(-100,0),p(100,0)],yRoad=[p(0,-100),p(0,100)];
+const truck={length:9.1,width:2.6,wheelbase:5.2,rearOverhang:2.5,trailer:false,hitchOffset:0,trailerLength:8,trailerWidth:2.5,trailerAxleToHitch:6};
+test('classifica conversões direita esquerda reto retorno',()=>{assert.equal(classifyMovement(p(1,0),p(0,1)).kind,'left');assert.equal(classifyMovement(p(1,0),p(0,-1)).kind,'right');assert.equal(classifyMovement(p(1,0),p(1,0)).kind,'straight');assert.equal(classifyMovement(p(1,0),p(-1,0)).kind,'uturn')});
+test('fillet 90 graus com raio 12 tangent length 12',()=>{const g=circularFillet(p(0,0),p(1,0),p(0,1),12,{approachLength:30,departureLength:30});assert.ok(Math.abs(g.tangentLength-12)<1e-8);assert.ok(Math.abs(g.tangentStart.x+12)<1e-8);assert.ok(Math.abs(g.tangentEnd.y-12)<1e-8);assert.ok(Math.abs(Math.hypot(g.tangentStart.x-g.center.x,g.tangentStart.y-g.center.y)-12)<1e-8)});
+test('fillet à direita mantém raio e sentido',()=>{const g=circularFillet(p(0,0),p(1,0),p(0,-1),10,{approachLength:20,departureLength:20});assert.equal(g.movement,'right');assert.ok(g.center.y<0)});
+test('fillet rejeita aproximação insuficiente',()=>assert.throws(()=>circularFillet(p(0,0),p(1,0),p(0,1),30,{approachLength:15,departureLength:40}),/Espaço insuficiente/));
+test('fillet rejeita retorno',()=>assert.throws(()=>circularFillet(p(0,0),p(1,0),p(-1,0),10),/Retorno/));
+test('direção da faixa negativa inverte eixo',()=>{const lane=directedLane(xRoad,section,'R1');assert.ok(lane.points[0].x>lane.points.at(-1).x)});
+test('seções fornecem IDs de faixas por sentido',()=>{assert.deepEqual(laneDirections(section).map(x=>x.id),['R1','L1'])});
+test('cruzamento de linhas fornece encontro',()=>{assert.deepEqual(lineCrossing(p(-1,0),p(1,0),p(0,-1),p(0,1)).point,p(0,0))});
+test('gera conector de faixas real com concordância circular',()=>{const a=designLaneTurn(xRoad,yRoad,{sectionA:section,sectionB:section,fromLane:'L1',toLane:'L1',radius:12});assert.equal(a.fromLane,'L1');assert.equal(a.toLane,'L1');assert.equal(a.movement,'left');assert.ok(a.arc.length>10);assert.ok(a.points.length>a.arc.length)});
+test('bloqueia conversão esquerda por política explícita',()=>assert.throws(()=>designLaneTurn(xRoad,yRoad,{sectionA:section,sectionB:section,fromLane:'L1',toLane:'L1',radius:12,allowLeft:false}),/proibido/));
+test('detecta caminhão incompatível com raio muito pequeno',()=>{const g=designLaneTurn(xRoad,yRoad,{sectionA:section,sectionB:section,fromLane:'L1',toLane:'L1',radius:2});const result=checkDesignVehicle(g,truck,{steeringLimitDegrees:25});assert.equal(result.radiusOK,false)});
+test('aceita esterçamento preliminar com raio maior',()=>{const g=designLaneTurn(xRoad,yRoad,{sectionA:section,sectionB:section,fromLane:'L1',toLane:'L1',radius:16});const result=checkDesignVehicle(g,truck,{steeringLimitDegrees:35});assert.equal(result.radiusOK,true)});
+test('rejeita faixa inexistente',()=>assert.throws(()=>designLaneTurn(xRoad,yRoad,{sectionA:section,sectionB:section,fromLane:'L8',toLane:'L1'}),/desconhecida/));
+
+test('varredura compara manobra com plataformas reais (não o corredor fictício da curva)',()=>{const g=designLaneTurn(xRoad,yRoad,{sectionA:section,sectionB:section,fromLane:'L1',toLane:'L1',radius:12});const result=checkDesignVehicle(g,truck);assert.ok(result.footprint);assert.ok(result.footprint.checkedCells>1);assert.equal(typeof result.footprint.clear,'boolean');});
+test('área da interseção falha se plataforma não for informada',()=>assert.throws(()=>checkIntersectionFootprint({roadA:null},{states:[]}),/indisponível/));

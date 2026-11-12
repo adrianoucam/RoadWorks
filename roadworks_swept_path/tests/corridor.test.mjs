@@ -1,0 +1,17 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {corridorOffsets,crossElevation,generateCorridor,corridorOBJ,corridorSectionsCSV} from '../src/corridor.mjs';
+const section={lanesPerDirection:1,laneWidth:3.5,shoulderLeft:1.5,shoulderRight:2,median:0};
+const path=[{x:0,y:0},{x:100,y:0}];const profile={startElevation:20,startGradePercent:2,pvis:[]};
+const make=(opts={})=>generateCorridor({path,profile,section,step:10,...opts});
+test('Seção com acostamentos assimétricos preserva limites',()=>{const v=corridorOffsets(section);assert.equal(v.layout.leftEdge,5);assert.equal(v.layout.rightEdge,-5.5);assert.equal(v.offsets[0],-5.5);assert.equal(v.offsets.at(-1),5)});
+test('Corredor gera estacas de 0 a 100 inclusive',()=>{const c=make();assert.equal(c.sections.length,11);assert.equal(c.sections.at(-1).station,100)});
+test('Contagem consistente de triângulos e vértices',()=>{const c=make();assert.equal(c.vertices.length,c.sections.length*c.offsets.length);assert.equal(c.triangles.length,(c.sections.length-1)*(c.offsets.length-1)*2)});
+test('Greide inclinado aumenta cota 2m em 100m',()=>{const c=make();assert.ok(Math.abs(c.sections.at(-1).elevation-22)<1e-8)});
+test('Coroamento de 2% reduz ambas as bordas',()=>{const c=make();const p=c.sections[0];assert.ok(Math.abs(p.samples[0].z-19.89)<1e-8);assert.ok(Math.abs(p.samples.at(-1).z-19.90)<1e-8)});
+test('Superelevação invertida produz desnível oposto',()=>{assert.equal(crossElevation(20,5,{superelevationPercent:5}),20.25);assert.equal(crossElevation(20,-5,{superelevationPercent:5}),19.75)});
+test('Corrente em curva varia coordenadas XY',()=>{const c=make({path:[{x:0,y:0},{x:30,y:0},{x:30,y:40}]});assert.equal(c.sections.at(-1).y,40)});
+test('OBJ exporta faces 1-based e grupos por banda',()=>{const c=make();const s=corridorOBJ(c);assert.match(s,/^v 0\.000000 /m);assert.match(s,/^f 1 \d+ \d+/m);assert.equal(s.split('\nf ').length-1,c.triangles.length)});
+test('CSV contém cabeçalho e todas as amostras',()=>{const c=make();assert.equal(corridorSectionsCSV(c).trim().split('\n').length,1+c.vertices.length)});
+test('Valida passo de amostragem inválido',()=>assert.throws(()=>make({step:0.01}),/Passo longitudinal/));
+test('Rejeita comprimento de malha excessivo',()=>assert.throws(()=>make({step:.2,maxStations:10}),/limite/));
+test('Perfil parabólico propaga elevações na malha',()=>{const c=make({profile:{startElevation:20,startGradePercent:3,pvis:[{station:50,gradeOutPercent:-1,curveLength:40}]}});assert.ok(c.sections[5].elevation>c.sections[4].elevation);assert.ok(c.sections[5].elevation>20)});

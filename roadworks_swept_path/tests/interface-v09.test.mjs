@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root),'utf8');
+const html=read('index.html'),app=read('src/app.mjs'),viz=read('src/visualizer.mjs');
+test('v0.9 possui controles únicos de MDT, TIN, taludes e exportação',()=>{for(const id of ['terrainFile','terrainLoad','xyzMode','tinMaxEdge','terrainDemo','terrainClear','terrainVisible','terrainInfo','cutHV','fillHV','maxReach','lateralStep','earthworkBuild','earthworkInfo','earthworkCSV','earthworkSections','earthworkOBJ','mCut','mFill'])assert.equal((html.match(new RegExp(`id="${id}"`,'g'))||[]).length,1,id)});
+test('v0.9 usa GeoTIFF, TIN e integra terreno no visualizador existente',()=>{assert.match(app,/terrainFromGeoTIFF\(/);assert.match(app,/terrainFromTIN\(/);assert.match(app,/calculateEarthworks\(/);assert.match(viz,/terrainPreview\(/);assert.match(viz,/model\.earthworks/)});
+test('v0.9 mantém schemas antigos e não afirma incorporar MDT no JSON',()=>{assert.match(app,/schema:'roadworks-swept-path\/1\.6'/);for(const v of ['0.1','0.2','0.4','0.5','0.6','0.7','0.8','0.9'])assert.ok(app.includes(`roadworks-swept-path/${v}`));assert.match(app,/Terreno NÃO é incorporado/)});
