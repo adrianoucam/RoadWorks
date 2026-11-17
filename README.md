@@ -4,7 +4,7 @@
 
 O RoadWorks reúne ferramentas para estudar redes viárias, desenhar corredores, planejar obras e comparar cenários de mobilidade antes de uma intervenção. O projeto usa **Niterói, RJ, como piloto**, com cidades e áreas de estudo configuráveis.
 
-**Versão atual: 1.9 — Cidade e terreno 3D.** Desenvolvido em JavaScript e Python, com execução local, interface no navegador e armazenamento em SQLite.
+**Versão atual: 2.2 — Navegação, prevenção de erros e recuperação de ações.** Desenvolvido em JavaScript e Python, com execução local, interface no navegador e armazenamento em SQLite.
 
 > Projeto experimental para estudo, pesquisa e análise preliminar. Os resultados dependem das fontes, das hipóteses e da calibração. O programa não declara homologação de engenharia nem equivalência completa ao Autodesk InfraWorks.
 
@@ -12,7 +12,7 @@ O RoadWorks reúne ferramentas para estudar redes viárias, desenhar corredores,
 
 Rede cartográfica do OpenStreetMap no recorte piloto de Niterói sobre **terreno FICTÍCIO de demonstração**. A imagem não representa um levantamento topográfico da cidade.
 
-![Rede urbana e terreno fictício na vista 3D do RoadWorks](roadworks_swept_path/docs/images/cidade-3d-demonstracao.png)
+![Rede urbana e terreno fictício na vista 3D do RoadWorks](docs/images/cidade-3d-demonstracao.png)
 
 ## O que é possível fazer
 
@@ -27,6 +27,8 @@ Rede cartográfica do OpenStreetMap no recorte piloto de Niterói sobre **terren
 | Mobilidade urbana | Configurar viagens origem–destino, classes de veículos, ocupação e percentuais de demanda |
 | Cenários de trânsito | Simular acidentes e obras temporários, configurar semáforos manualmente e comparar alternativas |
 | Capacidade e filas | Examinar viagens concluídas/pendentes, tempos e filas; testar níveis de demanda contra critérios definidos |
+| Interdição e contorno | Busca e confirmação de local, seleção no mapa, fechamento bilateral, passagem obrigatória por rua, comparação e relatórios |
+| Estudos e experimentos | Base congelada, alternativas duplicáveis, lotes, chegadas Poisson, sementes, repetições, critérios, sondas e convergência temporal |
 | Matemática e ML | Sensibilidade, calibração assistida, regressão ridge temporal, ajuste OD não negativo e PCA |
 | SUMO | Preparar e executar cenários locais em rede georreferenciada e importar resultados |
 | Projetos e arquivos | Salvar revisões no SQLite; importar/exportar JSON; gerar CSV, GeoJSON, OBJ e relatórios, conforme o módulo |
@@ -48,13 +50,13 @@ Não há etapa obrigatória de build com npm. As novas análises numéricas roda
 Baixe ou clone o repositório. No PowerShell, entre na pasta da aplicação, que contém `index.html`, `requirements.txt` e `tools/`:
 
 ```powershell
-cd roadworks_swept_path
+cd caminho/do/repositorio
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe tools/launch.py
 ```
 
-Depois da instalação inicial, abra **`Iniciar_RoadWorks.cmd`** para iniciar novamente.
+Depois da instalação inicial, abra **`Iniciar_RoadWorks.cmd`** na raiz para iniciar novamente. Nesta instalação, `src/`, `tools/`, `tests/` e `samples/` ficam na raiz. A pasta histórica `roadworks_swept_path/` pode conservar o ambiente `.venv`; o iniciador reconhece esse ambiente automaticamente.
 
 O lançador abre o navegador, reconhece uma instância desta instalação e procura outra porta se a preferida estiver ocupada. Não encerra outros programas. O endereço habitual é [http://127.0.0.1:8000](http://127.0.0.1:8000); confira o endereço efetivamente informado no terminal.
 
@@ -83,9 +85,25 @@ Para salvar no SQLite, utilize a aplicação pela API FastAPI. Abrir somente o H
 6. Cadastre demanda OD, controles e eventos. O recorte OSM distribuído não contém volumes de trânsito observados.
 7. Compare cenários, examine também as viagens pendentes e salve uma revisão do projeto.
 
-Na cena 3D: arraste para orbitar, use Shift+arraste ou botão direito para deslocar, a roda para zoom e duplo clique para enquadrar.
+Na cena 3D: arraste para orbitar, use Shift+arraste ou botão direito para deslocar, a roda para zoom e duplo clique para enquadrar. Há vistas superior, frontal e isométrica e enquadramento do trecho selecionado.
 
 Para experimentar os métodos numéricos, abra **10 · Matemática e ML** e carregue os dados de demonstração **FICTÍCIOS**. Os exemplos de calibração e ajuste OD correspondem à rede fictícia A–B–C, disponível em **Novo exemplo fictício**; não são medições da rede OSM.
+
+## Navegar com mais clareza
+
+Use **Encontrar ferramenta**, no topo do painel esquerdo, para acessar diretamente um módulo. O assistente de contorno agora mostra a próxima etapa, identifica erros junto aos campos e oferece **Desfazer aplicação / Refazer aplicação**. Escape encerra a seleção no mapa preservando os dados. Veja [usabilidade v2.2](docs/USABILIDADE_V22.md), com a origem das decisões e seus limites.
+
+## Interditar uma rua e criar contorno
+
+Abra **13 · Interdição e contorno**. Busque e confirme o local, carregue suas vias, clique no trecho e escolha a rua de passagem. Visualize o contorno e compare antes/depois na mesma tela. Exporte os resultados ou salve o projeto no SQLite, sem preparar JSON manualmente. O [guia v2.1](docs/CONTORNO_V21.md) explica o fluxo e suas limitações.
+
+Para verificar o programa automaticamente, execute **`Testar_RoadWorks.cmd`**. O executador usa API e banco temporários separados, gera relatório JSON e retorna falha se alguma verificação não passar. Os testes de provedores geográficos são simulados; não certificam disponibilidade externa.
+
+## Comparar alternativas de mobilidade
+
+Abra **12 · Estudos** e capture a rede atual como base. Crie ou duplique alternativas para variar demanda, capacidade e interdições, aplique as propriedades e verifique as entradas antes de executar o lote. Configure chegadas regulares ou Poisson, passo temporal, sementes e repetições. Compare filas, pendentes, P50/P95 e vazão, com metas definidas por você.
+
+Use **Ampliar comparação e gráficos** para examinar os resultados. O estudo exporta JSON, CSV e relatório HTML com parâmetros e rastreabilidade. **Ctrl+K** abre a busca de painéis e comandos. O [guia v2.0](docs/ESTUDOS_V20.md) explica os indicadores, a convergência temporal e os limites. A [origem das propostas](docs/SOLIDWORKS_PROPOSTAS_V20.md) relaciona os recursos aos manuais fornecidos.
 
 ## Como interpretar as simulações
 
@@ -94,7 +112,7 @@ O projeto oferece ferramentas com escopos diferentes:
 | Ferramenta | Interpretação |
 |---|---|
 | Prévia agregada de tráfego | Modelo simplificado de capacidade e filas de um corredor/desvio abstrato |
-| Mobilidade urbana no navegador | Modelo mesoscópico determinístico com rotas, filas FIFO, armazenamento finito e eventos temporários |
+| Mobilidade urbana no navegador | Modelo mesoscópico com chegadas regulares; nos estudos v2.0, opção Poisson reproduzível; com rotas, filas FIFO, armazenamento finito e eventos temporários |
 | Integração SUMO | Execução externa de microssimulação sobre a rede preparada pelo projeto |
 
 Nenhuma dessas modalidades se torna uma previsão validada de Niterói apenas por utilizar suas ruas. São necessários dados de demanda, controles, contagens, tempos e calibração/validação independentes.
@@ -119,26 +137,26 @@ netconvert --version
 
 Use uma pasta de saída vazia por execução. Para apenas preparar arquivos, substitua `--run` por `--prepare-only`; essa opção não produz métricas de simulação. Depois de uma execução completa, importe `result.json` no painel urbano.
 
-Fechamentos de faixas são exportados. O fator abstrato de capacidade do modelo mesoscópico não é convertido em um parâmetro equivalente fictício do SUMO. O pipeline atual também tem limites para pedestres, conexões por faixa e planos semafóricos: consulte o [guia de mobilidade](roadworks_swept_path/docs/URBAN_V17.md).
+Fechamentos de faixas são exportados. O fator abstrato de capacidade do modelo mesoscópico não é convertido em um parâmetro equivalente fictício do SUMO. O pipeline atual também tem limites para pedestres, conexões por faixa e planos semafóricos: consulte o [guia de mobilidade](docs/URBAN_V17.md).
 
 ## Projetos, dados e exemplos
 
-O banco padrão fica em `../roadworks_data/roadworks.db`, fora da pasta pública da aplicação. A variável de ambiente `ROADWORKS_DB` permite escolher outro caminho. Os projetos são locais, com revisões e histórico; a aplicação não oferece colaboração multiusuário.
+Em uma distribuição nova, o banco padrão fica em `../roadworks_data/roadworks.db`. Nesta instalação com a pasta histórica, o banco existente em `roadworks_data/roadworks.db` da raiz é preservado. A rota estática bloqueia bancos e pastas privadas. A variável de ambiente `ROADWORKS_DB` permite escolher outro caminho. Os projetos são locais, com revisões e histórico; a aplicação não oferece colaboração multiusuário.
 
 O projeto completo admite snapshots de até **8 MB**. A cena 3D salva uma prévia reduzida do terreno, com origem e metadados. Preserve o arquivo original: a prévia não o substitui para volumes ou projeto executivo. **Projeto JSON** inclui o estado integrado; a exportação de estudo urbano isolado tem escopo menor.
 
 Exemplos incluídos:
 
-- [Rede OSM de Niterói sem demanda observada](roadworks_swept_path/samples/niteroi_rede_OSM_sem_demanda.json): 133 nós e 170 trechos direcionados.
-- [Fonte e atribuição do recorte](roadworks_swept_path/samples/NITEROI_OSM_FONTE.md).
-- [Estudo urbano fictício](roadworks_swept_path/samples/estudo_urbano_FICTICIO.json).
-- [Demanda OD fictícia em CSV](roadworks_swept_path/samples/demanda_OD_FICTICIA.csv).
-- [Demonstrações matemáticas e de ML fictícias](roadworks_swept_path/samples/analises_ML_FICTICIAS.json).
+- [Rede OSM de Niterói sem demanda observada](samples/niteroi_rede_OSM_sem_demanda.json): 133 nós e 170 trechos direcionados.
+- [Fonte e atribuição do recorte](samples/NITEROI_OSM_FONTE.md).
+- [Estudo urbano fictício](samples/estudo_urbano_FICTICIO.json).
+- [Demanda OD fictícia em CSV](samples/demanda_OD_FICTICIA.csv).
+- [Demonstrações matemáticas e de ML fictícias](samples/analises_ML_FICTICIAS.json).
 
 ## Arquitetura
 
 ```text
-roadworks_swept_path/
+roadworks/
 ├── index.html, style.css          Interface no navegador
 ├── Iniciar_RoadWorks.cmd          Inicialização no Windows
 ├── src/
@@ -149,6 +167,7 @@ roadworks_swept_path/
 │   ├── construction4d.mjs         Planejamento de obras
 │   ├── urban-traffic.mjs          Rede, demanda e simulação urbana
 │   ├── urban-analysis.mjs         Métodos numéricos e ML
+│   ├── study-*.mjs                Estudos, lotes, métricas e interface
 │   └── urban-scene*.mjs,
 │       urban-renderer.mjs         Cidade e terreno 3D
 ├── tools/                        FastAPI, SQLite, lançador e SUMO
@@ -171,17 +190,29 @@ $env:PATH=(Join-Path $PWD '.venv\Scripts')+';'+$env:PATH
 .\.venv\Scripts\python.exe -m unittest discover -s tools -p "test_*.py" -v
 ```
 
-A [verificação registrada da versão 1.9](roadworks_swept_path/docs/VALIDACAO_V19.md) relata **277 testes JavaScript**, **24 testes Python** e os fluxos de cidade 3D, mobilidade e análise no navegador. Sem os executáveis SUMO no PATH, os testes correspondentes são explicitamente ignorados.
+A [verificação registrada da versão 2.0](docs/VALIDACAO_V20.md) relata **292 testes JavaScript**, **26 testes Python** e quatro fluxos no navegador, incluindo estudos e os módulos anteriores. Sem os executáveis SUMO no PATH, os testes correspondentes são explicitamente ignorados.
 
-Os scripts opcionais `tools/browser_scene.cjs`, `tools/browser_urban.cjs` e `tools/browser_analysis.cjs` usam Playwright e Edge/Chromium. Configure uma API com banco exclusivo de QA antes de executá-los; eles criam projetos e revisões. As instruções estão nos guias e nos próprios scripts.
+Os scripts opcionais `tools/browser_study.cjs`, `tools/browser_scene.cjs`, `tools/browser_urban.cjs` e `tools/browser_analysis.cjs` usam Playwright e Edge/Chromium. Configure uma API com banco exclusivo de QA antes de executá-los; eles criam projetos e revisões. As instruções estão nos guias e nos próprios scripts.
 
 ## Documentação
 
-- [Cidade e terreno 3D — v1.9](roadworks_swept_path/docs/CIDADE_3D_V19.md).
-- [Matemática, ML e uso local — v1.8](roadworks_swept_path/docs/ANALISE_LOCAL_V18.md).
-- [Mobilidade urbana e SUMO — v1.7](roadworks_swept_path/docs/URBAN_V17.md).
-- [Verificação v1.9](roadworks_swept_path/docs/VALIDACAO_V19.md), [v1.8](roadworks_swept_path/docs/VALIDACAO_V18.md) e [v1.7](roadworks_swept_path/docs/VALIDACAO_V17.md).
-- [Histórico de desenvolvimento preservado](roadworks_swept_path/docs/HISTORICO_DESENVOLVIMENTO.md).
+- [Verificação v2.2: 317 testes JavaScript, 28 Python e seis fluxos de navegador](docs/VALIDACAO_V22.md).
+
+- [Usabilidade, navegação e recuperação de ações — v2.2](docs/USABILIDADE_V22.md).
+
+- [Verificação v2.1: 309 testes JavaScript, 28 Python e cinco fluxos de navegador](docs/VALIDACAO_V21.md).
+
+- [Interdição, contorno e testes automáticos — v2.1](docs/CONTORNO_V21.md).
+
+- [Estudos e experimentos — v2.0](docs/ESTUDOS_V20.md).
+- [Adaptação dos manuais SolidWorks](docs/SOLIDWORKS_PROPOSTAS_V20.md).
+- [Verificação v2.0](docs/VALIDACAO_V20.md).
+
+- [Cidade e terreno 3D — v1.9](docs/CIDADE_3D_V19.md).
+- [Matemática, ML e uso local — v1.8](docs/ANALISE_LOCAL_V18.md).
+- [Mobilidade urbana e SUMO — v1.7](docs/URBAN_V17.md).
+- [Verificação v1.9](docs/VALIDACAO_V19.md), [v1.8](docs/VALIDACAO_V18.md) e [v1.7](docs/VALIDACAO_V17.md).
+- [Histórico de desenvolvimento preservado](docs/HISTORICO_DESENVOLVIMENTO.md).
 
 ## Limites atuais
 
@@ -200,4 +231,6 @@ Relatos de problemas devem informar versão, etapas para reprodução, comportam
 
 Ainda não há um arquivo `LICENSE` definindo a licença do código neste projeto. Este README não atribui uma licença ao software.
 
-Os dados cartográficos OSM incluídos possuem atribuição **© OpenStreetMap contributors** e são disponibilizados sob ODbL, conforme o [registro da fonte](roadworks_swept_path/samples/NITEROI_OSM_FONTE.md). Bibliotecas, ferramentas externas e materiais de referência mantêm suas próprias licenças e condições de uso.
+Os dados cartográficos OSM incluídos possuem atribuição **© OpenStreetMap contributors** e são disponibilizados sob ODbL, conforme o [registro da fonte](samples/NITEROI_OSM_FONTE.md). Bibliotecas, ferramentas externas e materiais de referência mantêm suas próprias licenças e condições de uso.
+
+Exemplo local solicitado: [interdição exploratória na Palmier e contorno pela General Castrioto](studies/palmier_443_20261116/README.md), com mapa interativo, projeto JSON e resultados reproduzíveis. A posição exata do nº 443 não foi confirmada.
