@@ -1,0 +1,20 @@
+{
+  "schema": "roadworks-traffic-sumo/1.4",
+  "scenario": {
+    "demandVph": 1800,
+    "baseLanes": 2,
+    "capacityPerLane": 1500,
+    "freeSpeedKmh": 60,
+    "lengthM": 1000,
+    "detourLengthFactor": 1.5,
+    "detourLanes": 1,
+    "detourFraction": 0.35,
+    "minutes": 30,
+    "stepSeconds": 10,
+    "vehicleSpaceM": 7,
+    "impact": "one_lane",
+    "date": "2026-12-05",
+    "stageIds": []
+  },
+  "notes": "Experimento sintético: não representa tráfego observado ou rede OSM."
+}

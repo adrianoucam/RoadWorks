@@ -1,0 +1,2 @@
+import {studyPreflight,runStudyBatch,studyConvergence} from './study-workbench.mjs';
+self.onmessage=({data})=>{try{let result;if(data.kind==='preflight')result=studyPreflight(data.base);else if(data.kind==='batch')result=runStudyBatch(data.base,data.cases,data.options,data.criteria,p=>self.postMessage({progress:p}));else if(data.kind==='convergence')result=studyConvergence(data.base,data.options);else throw Error('Operação de estudo inválida');self.postMessage({result})}catch(e){self.postMessage({error:e.message})}};

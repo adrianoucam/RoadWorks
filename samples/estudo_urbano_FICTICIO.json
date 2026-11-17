@@ -1,0 +1,139 @@
+{
+  "schema": "roadworks-urban/1.7",
+  "city": {
+    "name": "Niterói",
+    "lat": -22.904,
+    "lon": -43.103
+  },
+  "source": "synthetic",
+  "nodes": [
+    {
+      "id": "A",
+      "lat": -22.904,
+      "lon": -43.108
+    },
+    {
+      "id": "B",
+      "lat": -22.904,
+      "lon": -43.104
+    },
+    {
+      "id": "C",
+      "lat": -22.904,
+      "lon": -43.1
+    },
+    {
+      "id": "D",
+      "lat": -22.901,
+      "lon": -43.104
+    }
+  ],
+  "edges": [
+    {
+      "id": "AB",
+      "from": "A",
+      "to": "B",
+      "lengthM": 410,
+      "lanes": 2,
+      "speedKmh": 40,
+      "capacityVphLane": 1200,
+      "storagePerLane": 40,
+      "modes": [
+        "car",
+        "bus",
+        "truck"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "BC",
+      "from": "B",
+      "to": "C",
+      "lengthM": 410,
+      "lanes": 2,
+      "speedKmh": 40,
+      "capacityVphLane": 1200,
+      "storagePerLane": 40,
+      "modes": [
+        "car",
+        "bus",
+        "truck"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "BD",
+      "from": "B",
+      "to": "D",
+      "lengthM": 340,
+      "lanes": 1,
+      "speedKmh": 40,
+      "capacityVphLane": 1200,
+      "storagePerLane": 40,
+      "modes": [
+        "car",
+        "bus",
+        "truck"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "DC",
+      "from": "D",
+      "to": "C",
+      "lengthM": 530,
+      "lanes": 1,
+      "speedKmh": 40,
+      "capacityVphLane": 1200,
+      "storagePerLane": 40,
+      "modes": [
+        "car",
+        "bus",
+        "truck"
+      ],
+      "source": "synthetic"
+    }
+  ],
+  "od": [
+    {
+      "id": "autos",
+      "from": "A",
+      "to": "C",
+      "mode": "car",
+      "rateVph": 1600,
+      "begin": 0,
+      "end": 1800,
+      "occupancy": 1.4
+    },
+    {
+      "id": "onibus",
+      "from": "A",
+      "to": "C",
+      "mode": "bus",
+      "rateVph": 20,
+      "begin": 0,
+      "end": 1800,
+      "occupancy": 35
+    }
+  ],
+  "events": [
+    {
+      "id": "obra",
+      "edge": "BC",
+      "kind": "work",
+      "begin": 300,
+      "end": 1200,
+      "closedLanes": 1,
+      "capacityFactor": 0.6
+    }
+  ],
+  "signals": [],
+  "demandAdjustments": [],
+  "inventory": [],
+  "settings": {
+    "durationSeconds": 2400,
+    "demandPercent": 0,
+    "queueThreshold": 100,
+    "completionThreshold": 0.95
+  }
+}

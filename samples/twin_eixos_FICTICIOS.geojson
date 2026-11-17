@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "name": "TESTE SINTETICO: nao representa a rodovia real",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "fake-1",
+      "properties": {
+        "name": "Via FICTÍCIA A",
+        "highway": "primary",
+        "lanes": "2",
+        "width": "7.0"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -43.103,
+            -22.904
+          ],
+          [
+            -43.102,
+            -22.9036
+          ],
+          [
+            -43.101,
+            -22.9034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fake-2",
+      "properties": {
+        "name": "Via FICTÍCIA B",
+        "highway": "residential",
+        "lanes": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -43.1025,
+            -22.9047
+          ],
+          [
+            -43.102,
+            -22.9036
+          ],
+          [
+            -43.1018,
+            -22.903
+          ]
+        ]
+      }
+    }
+  ]
+}

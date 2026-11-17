@@ -1,0 +1,3 @@
+id;from;to;mode;rateVph;begin;end;occupancy
+autos;A;C;car;1600;0;1800;1.4
+onibus;A;C;bus;20;0;1800;35

@@ -1,0 +1,2115 @@
+{
+  "description": "DADOS INTEGRALMENTE FICTÍCIOS. Exemplo matemático, não representa Niterói.",
+  "history": {
+    "schema": "roadworks-demand-history/1.8",
+    "source": "synthetic",
+    "description": "Série fictícia de uma OD, veículos/hora",
+    "rows": [
+      {
+        "timestamp": "2026-10-01T00:00:00-03:00",
+        "demandVph": 983
+      },
+      {
+        "timestamp": "2026-10-01T01:00:00-03:00",
+        "demandVph": 1049
+      },
+      {
+        "timestamp": "2026-10-01T02:00:00-03:00",
+        "demandVph": 1139
+      },
+      {
+        "timestamp": "2026-10-01T03:00:00-03:00",
+        "demandVph": 1203
+      },
+      {
+        "timestamp": "2026-10-01T04:00:00-03:00",
+        "demandVph": 1232
+      },
+      {
+        "timestamp": "2026-10-01T05:00:00-03:00",
+        "demandVph": 1271
+      },
+      {
+        "timestamp": "2026-10-01T06:00:00-03:00",
+        "demandVph": 1295
+      },
+      {
+        "timestamp": "2026-10-01T07:00:00-03:00",
+        "demandVph": 1268
+      },
+      {
+        "timestamp": "2026-10-01T08:00:00-03:00",
+        "demandVph": 1233
+      },
+      {
+        "timestamp": "2026-10-01T09:00:00-03:00",
+        "demandVph": 1205
+      },
+      {
+        "timestamp": "2026-10-01T10:00:00-03:00",
+        "demandVph": 1137
+      },
+      {
+        "timestamp": "2026-10-01T11:00:00-03:00",
+        "demandVph": 1049
+      },
+      {
+        "timestamp": "2026-10-01T12:00:00-03:00",
+        "demandVph": 985
+      },
+      {
+        "timestamp": "2026-10-01T13:00:00-03:00",
+        "demandVph": 916
+      },
+      {
+        "timestamp": "2026-10-01T14:00:00-03:00",
+        "demandVph": 825
+      },
+      {
+        "timestamp": "2026-10-01T15:00:00-03:00",
+        "demandVph": 765
+      },
+      {
+        "timestamp": "2026-10-01T16:00:00-03:00",
+        "demandVph": 735
+      },
+      {
+        "timestamp": "2026-10-01T17:00:00-03:00",
+        "demandVph": 693
+      },
+      {
+        "timestamp": "2026-10-01T18:00:00-03:00",
+        "demandVph": 671
+      },
+      {
+        "timestamp": "2026-10-01T19:00:00-03:00",
+        "demandVph": 700
+      },
+      {
+        "timestamp": "2026-10-01T20:00:00-03:00",
+        "demandVph": 731
+      },
+      {
+        "timestamp": "2026-10-01T21:00:00-03:00",
+        "demandVph": 760
+      },
+      {
+        "timestamp": "2026-10-01T22:00:00-03:00",
+        "demandVph": 831
+      },
+      {
+        "timestamp": "2026-10-01T23:00:00-03:00",
+        "demandVph": 917
+      },
+      {
+        "timestamp": "2026-10-02T00:00:00-03:00",
+        "demandVph": 1066
+      },
+      {
+        "timestamp": "2026-10-02T01:00:00-03:00",
+        "demandVph": 1139
+      },
+      {
+        "timestamp": "2026-10-02T02:00:00-03:00",
+        "demandVph": 1231
+      },
+      {
+        "timestamp": "2026-10-02T03:00:00-03:00",
+        "demandVph": 1287
+      },
+      {
+        "timestamp": "2026-10-02T04:00:00-03:00",
+        "demandVph": 1319
+      },
+      {
+        "timestamp": "2026-10-02T05:00:00-03:00",
+        "demandVph": 1364
+      },
+      {
+        "timestamp": "2026-10-02T06:00:00-03:00",
+        "demandVph": 1382
+      },
+      {
+        "timestamp": "2026-10-02T07:00:00-03:00",
+        "demandVph": 1352
+      },
+      {
+        "timestamp": "2026-10-02T08:00:00-03:00",
+        "demandVph": 1325
+      },
+      {
+        "timestamp": "2026-10-02T09:00:00-03:00",
+        "demandVph": 1295
+      },
+      {
+        "timestamp": "2026-10-02T10:00:00-03:00",
+        "demandVph": 1220
+      },
+      {
+        "timestamp": "2026-10-02T11:00:00-03:00",
+        "demandVph": 1137
+      },
+      {
+        "timestamp": "2026-10-02T12:00:00-03:00",
+        "demandVph": 1078
+      },
+      {
+        "timestamp": "2026-10-02T13:00:00-03:00",
+        "demandVph": 1001
+      },
+      {
+        "timestamp": "2026-10-02T14:00:00-03:00",
+        "demandVph": 910
+      },
+      {
+        "timestamp": "2026-10-02T15:00:00-03:00",
+        "demandVph": 857
+      },
+      {
+        "timestamp": "2026-10-02T16:00:00-03:00",
+        "demandVph": 823
+      },
+      {
+        "timestamp": "2026-10-02T17:00:00-03:00",
+        "demandVph": 776
+      },
+      {
+        "timestamp": "2026-10-02T18:00:00-03:00",
+        "demandVph": 762
+      },
+      {
+        "timestamp": "2026-10-02T19:00:00-03:00",
+        "demandVph": 791
+      },
+      {
+        "timestamp": "2026-10-02T20:00:00-03:00",
+        "demandVph": 815
+      },
+      {
+        "timestamp": "2026-10-02T21:00:00-03:00",
+        "demandVph": 847
+      },
+      {
+        "timestamp": "2026-10-02T22:00:00-03:00",
+        "demandVph": 924
+      },
+      {
+        "timestamp": "2026-10-02T23:00:00-03:00",
+        "demandVph": 1004
+      },
+      {
+        "timestamp": "2026-10-03T00:00:00-03:00",
+        "demandVph": 1172
+      },
+      {
+        "timestamp": "2026-10-03T01:00:00-03:00",
+        "demandVph": 1253
+      },
+      {
+        "timestamp": "2026-10-03T02:00:00-03:00",
+        "demandVph": 1343
+      },
+      {
+        "timestamp": "2026-10-03T03:00:00-03:00",
+        "demandVph": 1392
+      },
+      {
+        "timestamp": "2026-10-03T04:00:00-03:00",
+        "demandVph": 1430
+      },
+      {
+        "timestamp": "2026-10-03T05:00:00-03:00",
+        "demandVph": 1478
+      },
+      {
+        "timestamp": "2026-10-03T06:00:00-03:00",
+        "demandVph": 1488
+      },
+      {
+        "timestamp": "2026-10-03T07:00:00-03:00",
+        "demandVph": 1460
+      },
+      {
+        "timestamp": "2026-10-03T08:00:00-03:00",
+        "demandVph": 1440
+      },
+      {
+        "timestamp": "2026-10-03T09:00:00-03:00",
+        "demandVph": 1405
+      },
+      {
+        "timestamp": "2026-10-03T10:00:00-03:00",
+        "demandVph": 1326
+      },
+      {
+        "timestamp": "2026-10-03T11:00:00-03:00",
+        "demandVph": 1250
+      },
+      {
+        "timestamp": "2026-10-03T12:00:00-03:00",
+        "demandVph": 1191
+      },
+      {
+        "timestamp": "2026-10-03T13:00:00-03:00",
+        "demandVph": 1107
+      },
+      {
+        "timestamp": "2026-10-03T14:00:00-03:00",
+        "demandVph": 1019
+      },
+      {
+        "timestamp": "2026-10-03T15:00:00-03:00",
+        "demandVph": 972
+      },
+      {
+        "timestamp": "2026-10-03T16:00:00-03:00",
+        "demandVph": 931
+      },
+      {
+        "timestamp": "2026-10-03T17:00:00-03:00",
+        "demandVph": 882
+      },
+      {
+        "timestamp": "2026-10-03T18:00:00-03:00",
+        "demandVph": 876
+      },
+      {
+        "timestamp": "2026-10-03T19:00:00-03:00",
+        "demandVph": 903
+      },
+      {
+        "timestamp": "2026-10-03T20:00:00-03:00",
+        "demandVph": 920
+      },
+      {
+        "timestamp": "2026-10-03T21:00:00-03:00",
+        "demandVph": 958
+      },
+      {
+        "timestamp": "2026-10-03T22:00:00-03:00",
+        "demandVph": 1038
+      },
+      {
+        "timestamp": "2026-10-03T23:00:00-03:00",
+        "demandVph": 1110
+      },
+      {
+        "timestamp": "2026-10-04T00:00:00-03:00",
+        "demandVph": 1219
+      },
+      {
+        "timestamp": "2026-10-04T01:00:00-03:00",
+        "demandVph": 1307
+      },
+      {
+        "timestamp": "2026-10-04T02:00:00-03:00",
+        "demandVph": 1392
+      },
+      {
+        "timestamp": "2026-10-04T03:00:00-03:00",
+        "demandVph": 1437
+      },
+      {
+        "timestamp": "2026-10-04T04:00:00-03:00",
+        "demandVph": 1481
+      },
+      {
+        "timestamp": "2026-10-04T05:00:00-03:00",
+        "demandVph": 1530
+      },
+      {
+        "timestamp": "2026-10-04T06:00:00-03:00",
+        "demandVph": 1533
+      },
+      {
+        "timestamp": "2026-10-04T07:00:00-03:00",
+        "demandVph": 1508
+      },
+      {
+        "timestamp": "2026-10-04T08:00:00-03:00",
+        "demandVph": 1493
+      },
+      {
+        "timestamp": "2026-10-04T09:00:00-03:00",
+        "demandVph": 1452
+      },
+      {
+        "timestamp": "2026-10-04T10:00:00-03:00",
+        "demandVph": 1371
+      },
+      {
+        "timestamp": "2026-10-04T11:00:00-03:00",
+        "demandVph": 1303
+      },
+      {
+        "timestamp": "2026-10-04T12:00:00-03:00",
+        "demandVph": 1242
+      },
+      {
+        "timestamp": "2026-10-04T13:00:00-03:00",
+        "demandVph": 1151
+      },
+      {
+        "timestamp": "2026-10-04T14:00:00-03:00",
+        "demandVph": 1069
+      },
+      {
+        "timestamp": "2026-10-04T15:00:00-03:00",
+        "demandVph": 1026
+      },
+      {
+        "timestamp": "2026-10-04T16:00:00-03:00",
+        "demandVph": 977
+      },
+      {
+        "timestamp": "2026-10-04T17:00:00-03:00",
+        "demandVph": 929
+      },
+      {
+        "timestamp": "2026-10-04T18:00:00-03:00",
+        "demandVph": 929
+      },
+      {
+        "timestamp": "2026-10-04T19:00:00-03:00",
+        "demandVph": 952
+      },
+      {
+        "timestamp": "2026-10-04T20:00:00-03:00",
+        "demandVph": 964
+      },
+      {
+        "timestamp": "2026-10-04T21:00:00-03:00",
+        "demandVph": 1009
+      },
+      {
+        "timestamp": "2026-10-04T22:00:00-03:00",
+        "demandVph": 1091
+      },
+      {
+        "timestamp": "2026-10-04T23:00:00-03:00",
+        "demandVph": 1155
+      },
+      {
+        "timestamp": "2026-10-05T00:00:00-03:00",
+        "demandVph": 1169
+      },
+      {
+        "timestamp": "2026-10-05T01:00:00-03:00",
+        "demandVph": 1263
+      },
+      {
+        "timestamp": "2026-10-05T02:00:00-03:00",
+        "demandVph": 1341
+      },
+      {
+        "timestamp": "2026-10-05T03:00:00-03:00",
+        "demandVph": 1384
+      },
+      {
+        "timestamp": "2026-10-05T04:00:00-03:00",
+        "demandVph": 1436
+      },
+      {
+        "timestamp": "2026-10-05T05:00:00-03:00",
+        "demandVph": 1483
+      },
+      {
+        "timestamp": "2026-10-05T06:00:00-03:00",
+        "demandVph": 1479
+      },
+      {
+        "timestamp": "2026-10-05T07:00:00-03:00",
+        "demandVph": 1460
+      },
+      {
+        "timestamp": "2026-10-05T08:00:00-03:00",
+        "demandVph": 1449
+      },
+      {
+        "timestamp": "2026-10-05T09:00:00-03:00",
+        "demandVph": 1400
+      },
+      {
+        "timestamp": "2026-10-05T10:00:00-03:00",
+        "demandVph": 1320
+      },
+      {
+        "timestamp": "2026-10-05T11:00:00-03:00",
+        "demandVph": 1258
+      },
+      {
+        "timestamp": "2026-10-05T12:00:00-03:00",
+        "demandVph": 1193
+      },
+      {
+        "timestamp": "2026-10-05T13:00:00-03:00",
+        "demandVph": 1097
+      },
+      {
+        "timestamp": "2026-10-05T14:00:00-03:00",
+        "demandVph": 1023
+      },
+      {
+        "timestamp": "2026-10-05T15:00:00-03:00",
+        "demandVph": 980
+      },
+      {
+        "timestamp": "2026-10-05T16:00:00-03:00",
+        "demandVph": 924
+      },
+      {
+        "timestamp": "2026-10-05T17:00:00-03:00",
+        "demandVph": 879
+      },
+      {
+        "timestamp": "2026-10-05T18:00:00-03:00",
+        "demandVph": 885
+      },
+      {
+        "timestamp": "2026-10-05T19:00:00-03:00",
+        "demandVph": 901
+      },
+      {
+        "timestamp": "2026-10-05T20:00:00-03:00",
+        "demandVph": 912
+      },
+      {
+        "timestamp": "2026-10-05T21:00:00-03:00",
+        "demandVph": 965
+      },
+      {
+        "timestamp": "2026-10-05T22:00:00-03:00",
+        "demandVph": 1043
+      },
+      {
+        "timestamp": "2026-10-05T23:00:00-03:00",
+        "demandVph": 1101
+      },
+      {
+        "timestamp": "2026-10-06T00:00:00-03:00",
+        "demandVph": 1060
+      },
+      {
+        "timestamp": "2026-10-06T01:00:00-03:00",
+        "demandVph": 1157
+      },
+      {
+        "timestamp": "2026-10-06T02:00:00-03:00",
+        "demandVph": 1227
+      },
+      {
+        "timestamp": "2026-10-06T03:00:00-03:00",
+        "demandVph": 1272
+      },
+      {
+        "timestamp": "2026-10-06T04:00:00-03:00",
+        "demandVph": 1331
+      },
+      {
+        "timestamp": "2026-10-06T05:00:00-03:00",
+        "demandVph": 1372
+      },
+      {
+        "timestamp": "2026-10-06T06:00:00-03:00",
+        "demandVph": 1365
+      },
+      {
+        "timestamp": "2026-10-06T07:00:00-03:00",
+        "demandVph": 1353
+      },
+      {
+        "timestamp": "2026-10-06T08:00:00-03:00",
+        "demandVph": 1342
+      },
+      {
+        "timestamp": "2026-10-06T09:00:00-03:00",
+        "demandVph": 1285
+      },
+      {
+        "timestamp": "2026-10-06T10:00:00-03:00",
+        "demandVph": 1209
+      },
+      {
+        "timestamp": "2026-10-06T11:00:00-03:00",
+        "demandVph": 1153
+      },
+      {
+        "timestamp": "2026-10-06T12:00:00-03:00",
+        "demandVph": 1080
+      },
+      {
+        "timestamp": "2026-10-06T13:00:00-03:00",
+        "demandVph": 984
+      },
+      {
+        "timestamp": "2026-10-06T14:00:00-03:00",
+        "demandVph": 917
+      },
+      {
+        "timestamp": "2026-10-06T15:00:00-03:00",
+        "demandVph": 871
+      },
+      {
+        "timestamp": "2026-10-06T16:00:00-03:00",
+        "demandVph": 809
+      },
+      {
+        "timestamp": "2026-10-06T17:00:00-03:00",
+        "demandVph": 771
+      },
+      {
+        "timestamp": "2026-10-06T18:00:00-03:00",
+        "demandVph": 779
+      },
+      {
+        "timestamp": "2026-10-06T19:00:00-03:00",
+        "demandVph": 787
+      },
+      {
+        "timestamp": "2026-10-06T20:00:00-03:00",
+        "demandVph": 800
+      },
+      {
+        "timestamp": "2026-10-06T21:00:00-03:00",
+        "demandVph": 859
+      },
+      {
+        "timestamp": "2026-10-06T22:00:00-03:00",
+        "demandVph": 932
+      },
+      {
+        "timestamp": "2026-10-06T23:00:00-03:00",
+        "demandVph": 987
+      },
+      {
+        "timestamp": "2026-10-07T00:00:00-03:00",
+        "demandVph": 975
+      },
+      {
+        "timestamp": "2026-10-07T01:00:00-03:00",
+        "demandVph": 1071
+      },
+      {
+        "timestamp": "2026-10-07T02:00:00-03:00",
+        "demandVph": 1135
+      },
+      {
+        "timestamp": "2026-10-07T03:00:00-03:00",
+        "demandVph": 1183
+      },
+      {
+        "timestamp": "2026-10-07T04:00:00-03:00",
+        "demandVph": 1248
+      },
+      {
+        "timestamp": "2026-10-07T05:00:00-03:00",
+        "demandVph": 1282
+      },
+      {
+        "timestamp": "2026-10-07T06:00:00-03:00",
+        "demandVph": 1273
+      },
+      {
+        "timestamp": "2026-10-07T07:00:00-03:00",
+        "demandVph": 1269
+      },
+      {
+        "timestamp": "2026-10-07T08:00:00-03:00",
+        "demandVph": 1255
+      },
+      {
+        "timestamp": "2026-10-07T09:00:00-03:00",
+        "demandVph": 1192
+      },
+      {
+        "timestamp": "2026-10-07T10:00:00-03:00",
+        "demandVph": 1122
+      },
+      {
+        "timestamp": "2026-10-07T11:00:00-03:00",
+        "demandVph": 1069
+      },
+      {
+        "timestamp": "2026-10-07T12:00:00-03:00",
+        "demandVph": 989
+      },
+      {
+        "timestamp": "2026-10-07T13:00:00-03:00",
+        "demandVph": 894
+      },
+      {
+        "timestamp": "2026-10-07T14:00:00-03:00",
+        "demandVph": 834
+      },
+      {
+        "timestamp": "2026-10-07T15:00:00-03:00",
+        "demandVph": 782
+      },
+      {
+        "timestamp": "2026-10-07T16:00:00-03:00",
+        "demandVph": 716
+      },
+      {
+        "timestamp": "2026-10-07T17:00:00-03:00",
+        "demandVph": 686
+      },
+      {
+        "timestamp": "2026-10-07T18:00:00-03:00",
+        "demandVph": 694
+      },
+      {
+        "timestamp": "2026-10-07T19:00:00-03:00",
+        "demandVph": 694
+      },
+      {
+        "timestamp": "2026-10-07T20:00:00-03:00",
+        "demandVph": 711
+      },
+      {
+        "timestamp": "2026-10-07T21:00:00-03:00",
+        "demandVph": 776
+      },
+      {
+        "timestamp": "2026-10-07T22:00:00-03:00",
+        "demandVph": 842
+      },
+      {
+        "timestamp": "2026-10-07T23:00:00-03:00",
+        "demandVph": 895
+      },
+      {
+        "timestamp": "2026-10-08T00:00:00-03:00",
+        "demandVph": 979
+      },
+      {
+        "timestamp": "2026-10-08T01:00:00-03:00",
+        "demandVph": 1073
+      },
+      {
+        "timestamp": "2026-10-08T02:00:00-03:00",
+        "demandVph": 1130
+      },
+      {
+        "timestamp": "2026-10-08T03:00:00-03:00",
+        "demandVph": 1185
+      },
+      {
+        "timestamp": "2026-10-08T04:00:00-03:00",
+        "demandVph": 1251
+      },
+      {
+        "timestamp": "2026-10-08T05:00:00-03:00",
+        "demandVph": 1278
+      },
+      {
+        "timestamp": "2026-10-08T06:00:00-03:00",
+        "demandVph": 1271
+      },
+      {
+        "timestamp": "2026-10-08T07:00:00-03:00",
+        "demandVph": 1274
+      },
+      {
+        "timestamp": "2026-10-08T08:00:00-03:00",
+        "demandVph": 1254
+      },
+      {
+        "timestamp": "2026-10-08T09:00:00-03:00",
+        "demandVph": 1188
+      },
+      {
+        "timestamp": "2026-10-08T10:00:00-03:00",
+        "demandVph": 1126
+      },
+      {
+        "timestamp": "2026-10-08T11:00:00-03:00",
+        "demandVph": 1072
+      },
+      {
+        "timestamp": "2026-10-08T12:00:00-03:00",
+        "demandVph": 984
+      },
+      {
+        "timestamp": "2026-10-08T13:00:00-03:00",
+        "demandVph": 893
+      },
+      {
+        "timestamp": "2026-10-08T14:00:00-03:00",
+        "demandVph": 838
+      },
+      {
+        "timestamp": "2026-10-08T15:00:00-03:00",
+        "demandVph": 780
+      },
+      {
+        "timestamp": "2026-10-08T16:00:00-03:00",
+        "demandVph": 713
+      },
+      {
+        "timestamp": "2026-10-08T17:00:00-03:00",
+        "demandVph": 690
+      },
+      {
+        "timestamp": "2026-10-08T18:00:00-03:00",
+        "demandVph": 695
+      },
+      {
+        "timestamp": "2026-10-08T19:00:00-03:00",
+        "demandVph": 690
+      },
+      {
+        "timestamp": "2026-10-08T20:00:00-03:00",
+        "demandVph": 713
+      },
+      {
+        "timestamp": "2026-10-08T21:00:00-03:00",
+        "demandVph": 780
+      },
+      {
+        "timestamp": "2026-10-08T22:00:00-03:00",
+        "demandVph": 838
+      },
+      {
+        "timestamp": "2026-10-08T23:00:00-03:00",
+        "demandVph": 893
+      },
+      {
+        "timestamp": "2026-10-09T00:00:00-03:00",
+        "demandVph": 1072
+      },
+      {
+        "timestamp": "2026-10-09T01:00:00-03:00",
+        "demandVph": 1160
+      },
+      {
+        "timestamp": "2026-10-09T02:00:00-03:00",
+        "demandVph": 1214
+      },
+      {
+        "timestamp": "2026-10-09T03:00:00-03:00",
+        "demandVph": 1276
+      },
+      {
+        "timestamp": "2026-10-09T04:00:00-03:00",
+        "demandVph": 1342
+      },
+      {
+        "timestamp": "2026-10-09T05:00:00-03:00",
+        "demandVph": 1362
+      },
+      {
+        "timestamp": "2026-10-09T06:00:00-03:00",
+        "demandVph": 1359
+      },
+      {
+        "timestamp": "2026-10-09T07:00:00-03:00",
+        "demandVph": 1367
+      },
+      {
+        "timestamp": "2026-10-09T08:00:00-03:00",
+        "demandVph": 1339
+      },
+      {
+        "timestamp": "2026-10-09T09:00:00-03:00",
+        "demandVph": 1273
+      },
+      {
+        "timestamp": "2026-10-09T10:00:00-03:00",
+        "demandVph": 1218
+      },
+      {
+        "timestamp": "2026-10-09T11:00:00-03:00",
+        "demandVph": 1161
+      },
+      {
+        "timestamp": "2026-10-09T12:00:00-03:00",
+        "demandVph": 1067
+      },
+      {
+        "timestamp": "2026-10-09T13:00:00-03:00",
+        "demandVph": 984
+      },
+      {
+        "timestamp": "2026-10-09T14:00:00-03:00",
+        "demandVph": 930
+      },
+      {
+        "timestamp": "2026-10-09T15:00:00-03:00",
+        "demandVph": 864
+      },
+      {
+        "timestamp": "2026-10-09T16:00:00-03:00",
+        "demandVph": 799
+      },
+      {
+        "timestamp": "2026-10-09T17:00:00-03:00",
+        "demandVph": 783
+      },
+      {
+        "timestamp": "2026-10-09T18:00:00-03:00",
+        "demandVph": 782
+      },
+      {
+        "timestamp": "2026-10-09T19:00:00-03:00",
+        "demandVph": 774
+      },
+      {
+        "timestamp": "2026-10-09T20:00:00-03:00",
+        "demandVph": 805
+      },
+      {
+        "timestamp": "2026-10-09T21:00:00-03:00",
+        "demandVph": 870
+      },
+      {
+        "timestamp": "2026-10-09T22:00:00-03:00",
+        "demandVph": 922
+      },
+      {
+        "timestamp": "2026-10-09T23:00:00-03:00",
+        "demandVph": 982
+      },
+      {
+        "timestamp": "2026-10-10T00:00:00-03:00",
+        "demandVph": 1187
+      },
+      {
+        "timestamp": "2026-10-10T01:00:00-03:00",
+        "demandVph": 1267
+      },
+      {
+        "timestamp": "2026-10-10T02:00:00-03:00",
+        "demandVph": 1320
+      },
+      {
+        "timestamp": "2026-10-10T03:00:00-03:00",
+        "demandVph": 1391
+      },
+      {
+        "timestamp": "2026-10-10T04:00:00-03:00",
+        "demandVph": 1453
+      },
+      {
+        "timestamp": "2026-10-10T05:00:00-03:00",
+        "demandVph": 1467
+      },
+      {
+        "timestamp": "2026-10-10T06:00:00-03:00",
+        "demandVph": 1471
+      },
+      {
+        "timestamp": "2026-10-10T07:00:00-03:00",
+        "demandVph": 1480
+      },
+      {
+        "timestamp": "2026-10-10T08:00:00-03:00",
+        "demandVph": 1445
+      },
+      {
+        "timestamp": "2026-10-10T09:00:00-03:00",
+        "demandVph": 1381
+      },
+      {
+        "timestamp": "2026-10-10T10:00:00-03:00",
+        "demandVph": 1333
+      },
+      {
+        "timestamp": "2026-10-10T11:00:00-03:00",
+        "demandVph": 1270
+      },
+      {
+        "timestamp": "2026-10-10T12:00:00-03:00",
+        "demandVph": 1173
+      },
+      {
+        "timestamp": "2026-10-10T13:00:00-03:00",
+        "demandVph": 1097
+      },
+      {
+        "timestamp": "2026-10-10T14:00:00-03:00",
+        "demandVph": 1043
+      },
+      {
+        "timestamp": "2026-10-10T15:00:00-03:00",
+        "demandVph": 969
+      },
+      {
+        "timestamp": "2026-10-10T16:00:00-03:00",
+        "demandVph": 910
+      },
+      {
+        "timestamp": "2026-10-10T17:00:00-03:00",
+        "demandVph": 898
+      },
+      {
+        "timestamp": "2026-10-10T18:00:00-03:00",
+        "demandVph": 889
+      },
+      {
+        "timestamp": "2026-10-10T19:00:00-03:00",
+        "demandVph": 881
+      },
+      {
+        "timestamp": "2026-10-10T20:00:00-03:00",
+        "demandVph": 919
+      },
+      {
+        "timestamp": "2026-10-10T21:00:00-03:00",
+        "demandVph": 981
+      },
+      {
+        "timestamp": "2026-10-10T22:00:00-03:00",
+        "demandVph": 1027
+      },
+      {
+        "timestamp": "2026-10-10T23:00:00-03:00",
+        "demandVph": 1094
+      },
+      {
+        "timestamp": "2026-10-11T00:00:00-03:00",
+        "demandVph": 1240
+      },
+      {
+        "timestamp": "2026-10-11T01:00:00-03:00",
+        "demandVph": 1312
+      },
+      {
+        "timestamp": "2026-10-11T02:00:00-03:00",
+        "demandVph": 1368
+      },
+      {
+        "timestamp": "2026-10-11T03:00:00-03:00",
+        "demandVph": 1444
+      },
+      {
+        "timestamp": "2026-10-11T04:00:00-03:00",
+        "demandVph": 1500
+      },
+      {
+        "timestamp": "2026-10-11T05:00:00-03:00",
+        "demandVph": 1512
+      },
+      {
+        "timestamp": "2026-10-11T06:00:00-03:00",
+        "demandVph": 1524
+      },
+      {
+        "timestamp": "2026-10-11T07:00:00-03:00",
+        "demandVph": 1531
+      },
+      {
+        "timestamp": "2026-10-11T08:00:00-03:00",
+        "demandVph": 1490
+      },
+      {
+        "timestamp": "2026-10-11T09:00:00-03:00",
+        "demandVph": 1431
+      },
+      {
+        "timestamp": "2026-10-11T10:00:00-03:00",
+        "demandVph": 1387
+      },
+      {
+        "timestamp": "2026-10-11T11:00:00-03:00",
+        "demandVph": 1316
+      },
+      {
+        "timestamp": "2026-10-11T12:00:00-03:00",
+        "demandVph": 1219
+      },
+      {
+        "timestamp": "2026-10-11T13:00:00-03:00",
+        "demandVph": 1150
+      },
+      {
+        "timestamp": "2026-10-11T14:00:00-03:00",
+        "demandVph": 1092
+      },
+      {
+        "timestamp": "2026-10-11T15:00:00-03:00",
+        "demandVph": 1013
+      },
+      {
+        "timestamp": "2026-10-11T16:00:00-03:00",
+        "demandVph": 961
+      },
+      {
+        "timestamp": "2026-10-11T17:00:00-03:00",
+        "demandVph": 950
+      },
+      {
+        "timestamp": "2026-10-11T18:00:00-03:00",
+        "demandVph": 934
+      },
+      {
+        "timestamp": "2026-10-11T19:00:00-03:00",
+        "demandVph": 928
+      },
+      {
+        "timestamp": "2026-10-11T20:00:00-03:00",
+        "demandVph": 973
+      },
+      {
+        "timestamp": "2026-10-11T21:00:00-03:00",
+        "demandVph": 1028
+      },
+      {
+        "timestamp": "2026-10-11T22:00:00-03:00",
+        "demandVph": 1072
+      },
+      {
+        "timestamp": "2026-10-11T23:00:00-03:00",
+        "demandVph": 1146
+      },
+      {
+        "timestamp": "2026-10-12T00:00:00-03:00",
+        "demandVph": 1193
+      },
+      {
+        "timestamp": "2026-10-12T01:00:00-03:00",
+        "demandVph": 1258
+      },
+      {
+        "timestamp": "2026-10-12T02:00:00-03:00",
+        "demandVph": 1320
+      },
+      {
+        "timestamp": "2026-10-12T03:00:00-03:00",
+        "demandVph": 1400
+      },
+      {
+        "timestamp": "2026-10-12T04:00:00-03:00",
+        "demandVph": 1449
+      },
+      {
+        "timestamp": "2026-10-12T05:00:00-03:00",
+        "demandVph": 1460
+      },
+      {
+        "timestamp": "2026-10-12T06:00:00-03:00",
+        "demandVph": 1479
+      },
+      {
+        "timestamp": "2026-10-12T07:00:00-03:00",
+        "demandVph": 1483
+      },
+      {
+        "timestamp": "2026-10-12T08:00:00-03:00",
+        "demandVph": 1436
+      },
+      {
+        "timestamp": "2026-10-12T09:00:00-03:00",
+        "demandVph": 1384
+      },
+      {
+        "timestamp": "2026-10-12T10:00:00-03:00",
+        "demandVph": 1341
+      },
+      {
+        "timestamp": "2026-10-12T11:00:00-03:00",
+        "demandVph": 1262
+      },
+      {
+        "timestamp": "2026-10-12T12:00:00-03:00",
+        "demandVph": 1169
+      },
+      {
+        "timestamp": "2026-10-12T13:00:00-03:00",
+        "demandVph": 1106
+      },
+      {
+        "timestamp": "2026-10-12T14:00:00-03:00",
+        "demandVph": 1041
+      },
+      {
+        "timestamp": "2026-10-12T15:00:00-03:00",
+        "demandVph": 960
+      },
+      {
+        "timestamp": "2026-10-12T16:00:00-03:00",
+        "demandVph": 916
+      },
+      {
+        "timestamp": "2026-10-12T17:00:00-03:00",
+        "demandVph": 903
+      },
+      {
+        "timestamp": "2026-10-12T18:00:00-03:00",
+        "demandVph": 880
+      },
+      {
+        "timestamp": "2026-10-12T19:00:00-03:00",
+        "demandVph": 880
+      },
+      {
+        "timestamp": "2026-10-12T20:00:00-03:00",
+        "demandVph": 928
+      },
+      {
+        "timestamp": "2026-10-12T21:00:00-03:00",
+        "demandVph": 976
+      },
+      {
+        "timestamp": "2026-10-12T22:00:00-03:00",
+        "demandVph": 1020
+      },
+      {
+        "timestamp": "2026-10-12T23:00:00-03:00",
+        "demandVph": 1102
+      },
+      {
+        "timestamp": "2026-10-13T00:00:00-03:00",
+        "demandVph": 1083
+      },
+      {
+        "timestamp": "2026-10-13T01:00:00-03:00",
+        "demandVph": 1143
+      },
+      {
+        "timestamp": "2026-10-13T02:00:00-03:00",
+        "demandVph": 1212
+      },
+      {
+        "timestamp": "2026-10-13T03:00:00-03:00",
+        "demandVph": 1293
+      },
+      {
+        "timestamp": "2026-10-13T04:00:00-03:00",
+        "demandVph": 1334
+      },
+      {
+        "timestamp": "2026-10-13T05:00:00-03:00",
+        "demandVph": 1349
+      },
+      {
+        "timestamp": "2026-10-13T06:00:00-03:00",
+        "demandVph": 1374
+      },
+      {
+        "timestamp": "2026-10-13T07:00:00-03:00",
+        "demandVph": 1371
+      },
+      {
+        "timestamp": "2026-10-13T08:00:00-03:00",
+        "demandVph": 1322
+      },
+      {
+        "timestamp": "2026-10-13T09:00:00-03:00",
+        "demandVph": 1278
+      },
+      {
+        "timestamp": "2026-10-13T10:00:00-03:00",
+        "demandVph": 1233
+      },
+      {
+        "timestamp": "2026-10-13T11:00:00-03:00",
+        "demandVph": 1148
+      },
+      {
+        "timestamp": "2026-10-13T12:00:00-03:00",
+        "demandVph": 1060
+      },
+      {
+        "timestamp": "2026-10-13T13:00:00-03:00",
+        "demandVph": 1001
+      },
+      {
+        "timestamp": "2026-10-13T14:00:00-03:00",
+        "demandVph": 928
+      },
+      {
+        "timestamp": "2026-10-13T15:00:00-03:00",
+        "demandVph": 848
+      },
+      {
+        "timestamp": "2026-10-13T16:00:00-03:00",
+        "demandVph": 810
+      },
+      {
+        "timestamp": "2026-10-13T17:00:00-03:00",
+        "demandVph": 793
+      },
+      {
+        "timestamp": "2026-10-13T18:00:00-03:00",
+        "demandVph": 766
+      },
+      {
+        "timestamp": "2026-10-13T19:00:00-03:00",
+        "demandVph": 773
+      },
+      {
+        "timestamp": "2026-10-13T20:00:00-03:00",
+        "demandVph": 822
+      },
+      {
+        "timestamp": "2026-10-13T21:00:00-03:00",
+        "demandVph": 862
+      },
+      {
+        "timestamp": "2026-10-13T22:00:00-03:00",
+        "demandVph": 909
+      },
+      {
+        "timestamp": "2026-10-13T23:00:00-03:00",
+        "demandVph": 997
+      },
+      {
+        "timestamp": "2026-10-14T00:00:00-03:00",
+        "demandVph": 993
+      },
+      {
+        "timestamp": "2026-10-14T01:00:00-03:00",
+        "demandVph": 1051
+      },
+      {
+        "timestamp": "2026-10-14T02:00:00-03:00",
+        "demandVph": 1128
+      },
+      {
+        "timestamp": "2026-10-14T03:00:00-03:00",
+        "demandVph": 1207
+      },
+      {
+        "timestamp": "2026-10-14T04:00:00-03:00",
+        "demandVph": 1241
+      },
+      {
+        "timestamp": "2026-10-14T05:00:00-03:00",
+        "demandVph": 1262
+      },
+      {
+        "timestamp": "2026-10-14T06:00:00-03:00",
+        "demandVph": 1290
+      },
+      {
+        "timestamp": "2026-10-14T07:00:00-03:00",
+        "demandVph": 1280
+      },
+      {
+        "timestamp": "2026-10-14T08:00:00-03:00",
+        "demandVph": 1231
+      },
+      {
+        "timestamp": "2026-10-14T09:00:00-03:00",
+        "demandVph": 1194
+      },
+      {
+        "timestamp": "2026-10-14T10:00:00-03:00",
+        "demandVph": 1145
+      },
+      {
+        "timestamp": "2026-10-14T11:00:00-03:00",
+        "demandVph": 1055
+      },
+      {
+        "timestamp": "2026-10-14T12:00:00-03:00",
+        "demandVph": 974
+      },
+      {
+        "timestamp": "2026-10-14T13:00:00-03:00",
+        "demandVph": 916
+      },
+      {
+        "timestamp": "2026-10-14T14:00:00-03:00",
+        "demandVph": 836
+      },
+      {
+        "timestamp": "2026-10-14T15:00:00-03:00",
+        "demandVph": 759
+      },
+      {
+        "timestamp": "2026-10-14T16:00:00-03:00",
+        "demandVph": 727
+      },
+      {
+        "timestamp": "2026-10-14T17:00:00-03:00",
+        "demandVph": 703
+      },
+      {
+        "timestamp": "2026-10-14T18:00:00-03:00",
+        "demandVph": 674
+      },
+      {
+        "timestamp": "2026-10-14T19:00:00-03:00",
+        "demandVph": 688
+      },
+      {
+        "timestamp": "2026-10-14T20:00:00-03:00",
+        "demandVph": 735
+      },
+      {
+        "timestamp": "2026-10-14T21:00:00-03:00",
+        "demandVph": 769
+      },
+      {
+        "timestamp": "2026-10-14T22:00:00-03:00",
+        "demandVph": 822
+      },
+      {
+        "timestamp": "2026-10-14T23:00:00-03:00",
+        "demandVph": 913
+      },
+      {
+        "timestamp": "2026-10-15T00:00:00-03:00",
+        "demandVph": 989
+      },
+      {
+        "timestamp": "2026-10-15T01:00:00-03:00",
+        "demandVph": 1049
+      },
+      {
+        "timestamp": "2026-10-15T02:00:00-03:00",
+        "demandVph": 1133
+      },
+      {
+        "timestamp": "2026-10-15T03:00:00-03:00",
+        "demandVph": 1207
+      },
+      {
+        "timestamp": "2026-10-15T04:00:00-03:00",
+        "demandVph": 1237
+      },
+      {
+        "timestamp": "2026-10-15T05:00:00-03:00",
+        "demandVph": 1264
+      },
+      {
+        "timestamp": "2026-10-15T06:00:00-03:00",
+        "demandVph": 1294
+      },
+      {
+        "timestamp": "2026-10-15T07:00:00-03:00",
+        "demandVph": 1275
+      },
+      {
+        "timestamp": "2026-10-15T08:00:00-03:00",
+        "demandVph": 1231
+      },
+      {
+        "timestamp": "2026-10-15T09:00:00-03:00",
+        "demandVph": 1199
+      },
+      {
+        "timestamp": "2026-10-15T10:00:00-03:00",
+        "demandVph": 1143
+      },
+      {
+        "timestamp": "2026-10-15T11:00:00-03:00",
+        "demandVph": 1051
+      },
+      {
+        "timestamp": "2026-10-15T12:00:00-03:00",
+        "demandVph": 978
+      },
+      {
+        "timestamp": "2026-10-15T13:00:00-03:00",
+        "demandVph": 917
+      },
+      {
+        "timestamp": "2026-10-15T14:00:00-03:00",
+        "demandVph": 831
+      },
+      {
+        "timestamp": "2026-10-15T15:00:00-03:00",
+        "demandVph": 760
+      },
+      {
+        "timestamp": "2026-10-15T16:00:00-03:00",
+        "demandVph": 731
+      },
+      {
+        "timestamp": "2026-10-15T17:00:00-03:00",
+        "demandVph": 699
+      },
+      {
+        "timestamp": "2026-10-15T18:00:00-03:00",
+        "demandVph": 671
+      },
+      {
+        "timestamp": "2026-10-15T19:00:00-03:00",
+        "demandVph": 693
+      },
+      {
+        "timestamp": "2026-10-15T20:00:00-03:00",
+        "demandVph": 735
+      },
+      {
+        "timestamp": "2026-10-15T21:00:00-03:00",
+        "demandVph": 764
+      },
+      {
+        "timestamp": "2026-10-15T22:00:00-03:00",
+        "demandVph": 825
+      },
+      {
+        "timestamp": "2026-10-15T23:00:00-03:00",
+        "demandVph": 916
+      },
+      {
+        "timestamp": "2026-10-16T00:00:00-03:00",
+        "demandVph": 1073
+      },
+      {
+        "timestamp": "2026-10-16T01:00:00-03:00",
+        "demandVph": 1137
+      },
+      {
+        "timestamp": "2026-10-16T02:00:00-03:00",
+        "demandVph": 1226
+      },
+      {
+        "timestamp": "2026-10-16T03:00:00-03:00",
+        "demandVph": 1293
+      },
+      {
+        "timestamp": "2026-10-16T04:00:00-03:00",
+        "demandVph": 1321
+      },
+      {
+        "timestamp": "2026-10-16T05:00:00-03:00",
+        "demandVph": 1357
+      },
+      {
+        "timestamp": "2026-10-16T06:00:00-03:00",
+        "demandVph": 1383
+      },
+      {
+        "timestamp": "2026-10-16T07:00:00-03:00",
+        "demandVph": 1358
+      },
+      {
+        "timestamp": "2026-10-16T08:00:00-03:00",
+        "demandVph": 1320
+      },
+      {
+        "timestamp": "2026-10-16T09:00:00-03:00",
+        "demandVph": 1291
+      },
+      {
+        "timestamp": "2026-10-16T10:00:00-03:00",
+        "demandVph": 1227
+      },
+      {
+        "timestamp": "2026-10-16T11:00:00-03:00",
+        "demandVph": 1137
+      },
+      {
+        "timestamp": "2026-10-16T12:00:00-03:00",
+        "demandVph": 1071
+      },
+      {
+        "timestamp": "2026-10-16T13:00:00-03:00",
+        "demandVph": 1005
+      },
+      {
+        "timestamp": "2026-10-16T14:00:00-03:00",
+        "demandVph": 914
+      },
+      {
+        "timestamp": "2026-10-16T15:00:00-03:00",
+        "demandVph": 851
+      },
+      {
+        "timestamp": "2026-10-16T16:00:00-03:00",
+        "demandVph": 822
+      },
+      {
+        "timestamp": "2026-10-16T17:00:00-03:00",
+        "demandVph": 783
+      },
+      {
+        "timestamp": "2026-10-16T18:00:00-03:00",
+        "demandVph": 759
+      },
+      {
+        "timestamp": "2026-10-16T19:00:00-03:00",
+        "demandVph": 786
+      },
+      {
+        "timestamp": "2026-10-16T20:00:00-03:00",
+        "demandVph": 821
+      },
+      {
+        "timestamp": "2026-10-16T21:00:00-03:00",
+        "demandVph": 849
+      },
+      {
+        "timestamp": "2026-10-16T22:00:00-03:00",
+        "demandVph": 917
+      },
+      {
+        "timestamp": "2026-10-16T23:00:00-03:00",
+        "demandVph": 1005
+      },
+      {
+        "timestamp": "2026-10-17T00:00:00-03:00",
+        "demandVph": 1178
+      },
+      {
+        "timestamp": "2026-10-17T01:00:00-03:00",
+        "demandVph": 1248
+      },
+      {
+        "timestamp": "2026-10-17T02:00:00-03:00",
+        "demandVph": 1340
+      },
+      {
+        "timestamp": "2026-10-17T03:00:00-03:00",
+        "demandVph": 1399
+      },
+      {
+        "timestamp": "2026-10-17T04:00:00-03:00",
+        "demandVph": 1429
+      },
+      {
+        "timestamp": "2026-10-17T05:00:00-03:00",
+        "demandVph": 1471
+      },
+      {
+        "timestamp": "2026-10-17T06:00:00-03:00",
+        "demandVph": 1492
+      },
+      {
+        "timestamp": "2026-10-17T07:00:00-03:00",
+        "demandVph": 1464
+      },
+      {
+        "timestamp": "2026-10-17T08:00:00-03:00",
+        "demandVph": 1433
+      },
+      {
+        "timestamp": "2026-10-17T09:00:00-03:00",
+        "demandVph": 1404
+      },
+      {
+        "timestamp": "2026-10-17T10:00:00-03:00",
+        "demandVph": 1333
+      },
+      {
+        "timestamp": "2026-10-17T11:00:00-03:00",
+        "demandVph": 1247
+      },
+      {
+        "timestamp": "2026-10-17T12:00:00-03:00",
+        "demandVph": 1186
+      },
+      {
+        "timestamp": "2026-10-17T13:00:00-03:00",
+        "demandVph": 1112
+      },
+      {
+        "timestamp": "2026-10-17T14:00:00-03:00",
+        "demandVph": 1021
+      },
+      {
+        "timestamp": "2026-10-17T15:00:00-03:00",
+        "demandVph": 965
+      },
+      {
+        "timestamp": "2026-10-17T16:00:00-03:00",
+        "demandVph": 933
+      },
+      {
+        "timestamp": "2026-10-17T17:00:00-03:00",
+        "demandVph": 888
+      },
+      {
+        "timestamp": "2026-10-17T18:00:00-03:00",
+        "demandVph": 871
+      },
+      {
+        "timestamp": "2026-10-17T19:00:00-03:00",
+        "demandVph": 900
+      },
+      {
+        "timestamp": "2026-10-17T20:00:00-03:00",
+        "demandVph": 927
+      },
+      {
+        "timestamp": "2026-10-17T21:00:00-03:00",
+        "demandVph": 957
+      },
+      {
+        "timestamp": "2026-10-17T22:00:00-03:00",
+        "demandVph": 1032
+      },
+      {
+        "timestamp": "2026-10-17T23:00:00-03:00",
+        "demandVph": 1115
+      },
+      {
+        "timestamp": "2026-10-18T00:00:00-03:00",
+        "demandVph": 1223
+      },
+      {
+        "timestamp": "2026-10-18T01:00:00-03:00",
+        "demandVph": 1300
+      },
+      {
+        "timestamp": "2026-10-18T02:00:00-03:00",
+        "demandVph": 1391
+      },
+      {
+        "timestamp": "2026-10-18T03:00:00-03:00",
+        "demandVph": 1443
+      },
+      {
+        "timestamp": "2026-10-18T04:00:00-03:00",
+        "demandVph": 1478
+      },
+      {
+        "timestamp": "2026-10-18T05:00:00-03:00",
+        "demandVph": 1525
+      },
+      {
+        "timestamp": "2026-10-18T06:00:00-03:00",
+        "demandVph": 1539
+      },
+      {
+        "timestamp": "2026-10-18T07:00:00-03:00",
+        "demandVph": 1510
+      },
+      {
+        "timestamp": "2026-10-18T08:00:00-03:00",
+        "demandVph": 1487
+      },
+      {
+        "timestamp": "2026-10-18T09:00:00-03:00",
+        "demandVph": 1454
+      },
+      {
+        "timestamp": "2026-10-18T10:00:00-03:00",
+        "demandVph": 1377
+      },
+      {
+        "timestamp": "2026-10-18T11:00:00-03:00",
+        "demandVph": 1297
+      },
+      {
+        "timestamp": "2026-10-18T12:00:00-03:00",
+        "demandVph": 1239
+      },
+      {
+        "timestamp": "2026-10-18T13:00:00-03:00",
+        "demandVph": 1158
+      },
+      {
+        "timestamp": "2026-10-18T14:00:00-03:00",
+        "demandVph": 1068
+      },
+      {
+        "timestamp": "2026-10-18T15:00:00-03:00",
+        "demandVph": 1019
+      },
+      {
+        "timestamp": "2026-10-18T16:00:00-03:00",
+        "demandVph": 981
+      },
+      {
+        "timestamp": "2026-10-18T17:00:00-03:00",
+        "demandVph": 933
+      },
+      {
+        "timestamp": "2026-10-18T18:00:00-03:00",
+        "demandVph": 923
+      },
+      {
+        "timestamp": "2026-10-18T19:00:00-03:00",
+        "demandVph": 951
+      },
+      {
+        "timestamp": "2026-10-18T20:00:00-03:00",
+        "demandVph": 971
+      },
+      {
+        "timestamp": "2026-10-18T21:00:00-03:00",
+        "demandVph": 1006
+      },
+      {
+        "timestamp": "2026-10-18T22:00:00-03:00",
+        "demandVph": 1086
+      },
+      {
+        "timestamp": "2026-10-18T23:00:00-03:00",
+        "demandVph": 1161
+      },
+      {
+        "timestamp": "2026-10-19T00:00:00-03:00",
+        "demandVph": 1171
+      },
+      {
+        "timestamp": "2026-10-19T01:00:00-03:00",
+        "demandVph": 1256
+      },
+      {
+        "timestamp": "2026-10-19T02:00:00-03:00",
+        "demandVph": 1343
+      },
+      {
+        "timestamp": "2026-10-19T03:00:00-03:00",
+        "demandVph": 1390
+      },
+      {
+        "timestamp": "2026-10-19T04:00:00-03:00",
+        "demandVph": 1431
+      },
+      {
+        "timestamp": "2026-10-19T05:00:00-03:00",
+        "demandVph": 1480
+      },
+      {
+        "timestamp": "2026-10-19T06:00:00-03:00",
+        "demandVph": 1486
+      },
+      {
+        "timestamp": "2026-10-19T07:00:00-03:00",
+        "demandVph": 1459
+      },
+      {
+        "timestamp": "2026-10-19T08:00:00-03:00",
+        "demandVph": 1442
+      },
+      {
+        "timestamp": "2026-10-19T09:00:00-03:00",
+        "demandVph": 1404
+      },
+      {
+        "timestamp": "2026-10-19T10:00:00-03:00",
+        "demandVph": 1323
+      },
+      {
+        "timestamp": "2026-10-19T11:00:00-03:00",
+        "demandVph": 1252
+      },
+      {
+        "timestamp": "2026-10-19T12:00:00-03:00",
+        "demandVph": 1192
+      },
+      {
+        "timestamp": "2026-10-19T13:00:00-03:00",
+        "demandVph": 1104
+      },
+      {
+        "timestamp": "2026-10-19T14:00:00-03:00",
+        "demandVph": 1019
+      },
+      {
+        "timestamp": "2026-10-19T15:00:00-03:00",
+        "demandVph": 975
+      },
+      {
+        "timestamp": "2026-10-19T16:00:00-03:00",
+        "demandVph": 930
+      },
+      {
+        "timestamp": "2026-10-19T17:00:00-03:00",
+        "demandVph": 881
+      },
+      {
+        "timestamp": "2026-10-19T18:00:00-03:00",
+        "demandVph": 878
+      },
+      {
+        "timestamp": "2026-10-19T19:00:00-03:00",
+        "demandVph": 903
+      },
+      {
+        "timestamp": "2026-10-19T20:00:00-03:00",
+        "demandVph": 917
+      },
+      {
+        "timestamp": "2026-10-19T21:00:00-03:00",
+        "demandVph": 959
+      },
+      {
+        "timestamp": "2026-10-19T22:00:00-03:00",
+        "demandVph": 1040
+      },
+      {
+        "timestamp": "2026-10-19T23:00:00-03:00",
+        "demandVph": 1108
+      },
+      {
+        "timestamp": "2026-10-20T00:00:00-03:00",
+        "demandVph": 1059
+      },
+      {
+        "timestamp": "2026-10-20T01:00:00-03:00",
+        "demandVph": 1151
+      },
+      {
+        "timestamp": "2026-10-20T02:00:00-03:00",
+        "demandVph": 1232
+      },
+      {
+        "timestamp": "2026-10-20T03:00:00-03:00",
+        "demandVph": 1275
+      },
+      {
+        "timestamp": "2026-10-20T04:00:00-03:00",
+        "demandVph": 1324
+      },
+      {
+        "timestamp": "2026-10-20T05:00:00-03:00",
+        "demandVph": 1372
+      },
+      {
+        "timestamp": "2026-10-20T06:00:00-03:00",
+        "demandVph": 1371
+      },
+      {
+        "timestamp": "2026-10-20T07:00:00-03:00",
+        "demandVph": 1349
+      },
+      {
+        "timestamp": "2026-10-20T08:00:00-03:00",
+        "demandVph": 1337
+      },
+      {
+        "timestamp": "2026-10-20T09:00:00-03:00",
+        "demandVph": 1291
+      },
+      {
+        "timestamp": "2026-10-20T10:00:00-03:00",
+        "demandVph": 1210
+      },
+      {
+        "timestamp": "2026-10-20T11:00:00-03:00",
+        "demandVph": 1146
+      },
+      {
+        "timestamp": "2026-10-20T12:00:00-03:00",
+        "demandVph": 1083
+      },
+      {
+        "timestamp": "2026-10-20T13:00:00-03:00",
+        "demandVph": 989
+      },
+      {
+        "timestamp": "2026-10-20T14:00:00-03:00",
+        "demandVph": 911
+      },
+      {
+        "timestamp": "2026-10-20T15:00:00-03:00",
+        "demandVph": 868
+      },
+      {
+        "timestamp": "2026-10-20T16:00:00-03:00",
+        "demandVph": 816
+      },
+      {
+        "timestamp": "2026-10-20T17:00:00-03:00",
+        "demandVph": 769
+      },
+      {
+        "timestamp": "2026-10-20T18:00:00-03:00",
+        "demandVph": 773
+      },
+      {
+        "timestamp": "2026-10-20T19:00:00-03:00",
+        "demandVph": 792
+      },
+      {
+        "timestamp": "2026-10-20T20:00:00-03:00",
+        "demandVph": 803
+      },
+      {
+        "timestamp": "2026-10-20T21:00:00-03:00",
+        "demandVph": 853
+      },
+      {
+        "timestamp": "2026-10-20T22:00:00-03:00",
+        "demandVph": 933
+      },
+      {
+        "timestamp": "2026-10-20T23:00:00-03:00",
+        "demandVph": 993
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00-03:00",
+        "demandVph": 971
+      },
+      {
+        "timestamp": "2026-10-21T01:00:00-03:00",
+        "demandVph": 1067
+      },
+      {
+        "timestamp": "2026-10-21T02:00:00-03:00",
+        "demandVph": 1141
+      },
+      {
+        "timestamp": "2026-10-21T03:00:00-03:00",
+        "demandVph": 1184
+      },
+      {
+        "timestamp": "2026-10-21T04:00:00-03:00",
+        "demandVph": 1241
+      },
+      {
+        "timestamp": "2026-10-21T05:00:00-03:00",
+        "demandVph": 1285
+      },
+      {
+        "timestamp": "2026-10-21T06:00:00-03:00",
+        "demandVph": 1278
+      },
+      {
+        "timestamp": "2026-10-21T07:00:00-03:00",
+        "demandVph": 1263
+      },
+      {
+        "timestamp": "2026-10-21T08:00:00-03:00",
+        "demandVph": 1252
+      },
+      {
+        "timestamp": "2026-10-21T09:00:00-03:00",
+        "demandVph": 1199
+      },
+      {
+        "timestamp": "2026-10-21T10:00:00-03:00",
+        "demandVph": 1121
+      },
+      {
+        "timestamp": "2026-10-21T11:00:00-03:00",
+        "demandVph": 1063
+      },
+      {
+        "timestamp": "2026-10-21T12:00:00-03:00",
+        "demandVph": 993
+      },
+      {
+        "timestamp": "2026-10-21T13:00:00-03:00",
+        "demandVph": 897
+      },
+      {
+        "timestamp": "2026-10-21T14:00:00-03:00",
+        "demandVph": 827
+      },
+      {
+        "timestamp": "2026-10-21T15:00:00-03:00",
+        "demandVph": 782
+      },
+      {
+        "timestamp": "2026-10-21T16:00:00-03:00",
+        "demandVph": 723
+      },
+      {
+        "timestamp": "2026-10-21T17:00:00-03:00",
+        "demandVph": 682
+      },
+      {
+        "timestamp": "2026-10-21T18:00:00-03:00",
+        "demandVph": 690
+      },
+      {
+        "timestamp": "2026-10-21T19:00:00-03:00",
+        "demandVph": 701
+      },
+      {
+        "timestamp": "2026-10-21T20:00:00-03:00",
+        "demandVph": 712
+      },
+      {
+        "timestamp": "2026-10-21T21:00:00-03:00",
+        "demandVph": 769
+      },
+      {
+        "timestamp": "2026-10-21T22:00:00-03:00",
+        "demandVph": 845
+      },
+      {
+        "timestamp": "2026-10-21T23:00:00-03:00",
+        "demandVph": 900
+      }
+    ]
+  },
+  "calibration": {
+    "source": "synthetic",
+    "description": "Filas fictícias geradas para a rede A-B-C com capacidade multiplicada por 0.8",
+    "observations": [
+      {
+        "role": "fit",
+        "percent": 0,
+        "period": "FICTICIO_dia_1",
+        "id": "observacao-0",
+        "metric": "maxQueue",
+        "scale": 100,
+        "observed": 283
+      },
+      {
+        "role": "fit",
+        "percent": 20,
+        "period": "FICTICIO_dia_2",
+        "id": "observacao-1",
+        "metric": "maxQueue",
+        "scale": 100,
+        "observed": 373
+      },
+      {
+        "role": "validation",
+        "percent": 10,
+        "period": "FICTICIO_dia_3",
+        "id": "observacao-2",
+        "metric": "maxQueue",
+        "scale": 100,
+        "observed": 326
+      }
+    ]
+  },
+  "od": {
+    "source": "synthetic",
+    "time": 0,
+    "lambda": 0.1,
+    "counts": [
+      {
+        "edge": "AB",
+        "observedVph": 1800
+      },
+      {
+        "edge": "BC",
+        "observedVph": 1800
+      }
+    ]
+  },
+  "pca": {
+    "columns": [
+      "fila_max",
+      "tempo_s",
+      "pendentes"
+    ],
+    "labels": [
+      "FICTICIO A",
+      "FICTICIO B",
+      "FICTICIO C",
+      "FICTICIO D",
+      "FICTICIO E"
+    ],
+    "rows": [
+      [
+        10,
+        70,
+        0
+      ],
+      [
+        20,
+        80,
+        0
+      ],
+      [
+        90,
+        160,
+        15
+      ],
+      [
+        150,
+        250,
+        60
+      ],
+      [
+        40,
+        100,
+        5
+      ]
+    ]
+  }
+}
