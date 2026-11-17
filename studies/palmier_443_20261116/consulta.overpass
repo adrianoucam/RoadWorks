@@ -1,0 +1,1 @@
+[out:json][timeout:45];(way["highway"](-22.871,-43.106,-22.856,-43.087);relation["type"="restriction"](-22.871,-43.106,-22.856,-43.087);nwr["addr:housenumber"="443"](-22.871,-43.106,-22.856,-43.087););out body;>;out skel qt;

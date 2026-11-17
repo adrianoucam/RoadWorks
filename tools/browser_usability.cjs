@@ -1,0 +1,19 @@
+/** Behavioral UX checks in the same isolated QA API used by the execution runner. */
+const assert=require('node:assert/strict'),path=require('node:path');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+(async()=>{const browser=await chromium.launch({channel:process.env.BROWSER_CHANNEL||'msedge',headless:true});try{
+ const page=await browser.newPage({viewport:{width:1600,height:1000},ignoreHTTPSErrors:true}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(process.env.ROADWORKS_URL||'http://127.0.0.1:8765',{waitUntil:'domcontentloaded',timeout:60000});await page.locator('#toolFilter').waitFor();
+ const count=await page.locator('#toolSelect option').count();assert.ok(count>15);
+ await page.locator('#toolFilter').fill('ferramenta inexistente');assert.match(await page.locator('#toolCount').textContent(),/Nenhuma/);assert.equal(await page.locator('#toolSelect option').count(),1);
+ await page.locator('#toolFilter').fill('interditar');await page.locator('#toolFilter').press('Enter');assert.equal(await page.locator('#detourPanel h3').getAttribute('aria-expanded'),'true');assert.equal(await page.locator('#urbanPanel h3').getAttribute('aria-expanded'),'false');assert.equal(await page.locator('#toolFilter').inputValue(),'interditar');
+ await page.locator('#dExample').click();await page.waitForFunction(()=>document.getElementById('dPrecision').textContent.includes('não confirmado'));assert.match(await page.locator('#dNext').textContent(),/confirme|Confira/);await page.locator('#dConfirm').click();
+ await page.getByRole('button',{name:'2 · Obra',exact:true}).click();await page.locator('#dEnd').fill('0');await page.locator('#dPreview').click();assert.equal(await page.locator('#dEnd').getAttribute('aria-invalid'),'true');assert.equal(await page.locator('#dEnd').evaluate(e=>e===document.activeElement),true);assert.equal(await page.locator('#dEnd').inputValue(),'0');assert.ok(await page.locator('#dEndError').isVisible());assert.ok(await page.locator('#dEnd').evaluate(e=>e.getBoundingClientRect().top>=document.querySelector('.tool-navigation').getBoundingClientRect().bottom),'O erro não pode ficar coberto pela navegação fixa');
+ const size=await page.locator('#dRun').evaluate(e=>e.getBoundingClientRect().height);assert.ok(size>=38);
+ if(process.env.ROADWORKS_SCREENSHOT)await page.screenshot({path:path.resolve(process.env.ROADWORKS_SCREENSHOT)});
+ await page.locator('#dEnd').fill('3600');assert.equal(await page.locator('#dEnd').getAttribute('aria-invalid'),null);await page.locator('#dPreview').click();assert.equal(await page.locator('#dMessage').getAttribute('data-kind'),'info');assert.match(await page.locator('#dRoute').textContent(),/General Castrioto/);
+ await page.locator('#dPickEdge').click();await page.keyboard.press('Escape');assert.equal(await page.locator('#dExitSelection').isVisible(),false);assert.equal(await page.locator('#dVia').inputValue(),'Rua General Castrioto');
+ await page.setViewportSize({width:900,height:900});assert.ok(await page.locator('#toolSelect').isVisible());assert.equal(await page.locator('#dVia').inputValue(),'Rua General Castrioto');
+ await page.setViewportSize({width:600,height:900});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),'A página não deve exigir rolagem horizontal no celular');assert.equal(await page.locator('#dVia').inputValue(),'Rua General Castrioto');
+ assert.deepEqual(errors,[]);console.log('PASS: catálogo vazio e por teclado, painel único sem perda de dados, estados ARIA, próximo passo, erro localizado/foco/recuperação, alvo de clique, Escape e telas 1600/900/600 px. Não é avaliação com participantes.');
+}finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});

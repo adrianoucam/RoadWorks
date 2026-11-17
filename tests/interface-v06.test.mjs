@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const root=new URL('../',import.meta.url);
+const html=readFileSync(new URL('index.html',root),'utf8');
+const js=readFileSync(new URL('src/app.mjs',root),'utf8');
+const visual=readFileSync(new URL('src/visualizer.mjs',root),'utf8');
+test('v0.6 documenta as três vistas técnicas',()=>{for(const id of ['map','profileCanvas','sectionCanvas','stationSlider'])assert.ok(html.includes(`id="${id}"`),id)});
+test('Controles de greide possuem identificadores únicos',()=>{for(const id of ['vStartZ','vStartGrade','pviStation','pviGrade','pviLength','pviAdd','pviRemove','pviReset','crossfall','vCrossSlope','stationInterval'])assert.equal((html.match(new RegExp(`id="${id}"`,'g'))||[]).length,1,id)});
+test('Integração de vistas sincroniza seleção de estaca',()=>{assert.match(js,/onPick:setSelectedStation/);assert.match(js,/function setSelectedStation/);assert.match(js,/updateStationMarker/)});
+test('Exportação v0.9 preserva greide e compatibilidade com v0.6',()=>{assert.match(js,/schema:'roadworks-swept-path\/1\.6'/);assert.match(js,/verticalProfile:profileInputs\(\)/);assert.match(js,/roadworks_perfil_v06.csv/)});
+test('Vista 3D dispõe de greide na malha rodoviária',()=>{assert.match(visual,/getVertical\(\)/);assert.match(visual,/vz\.v\.evaluate\(vz\.stations\[i\]\)/);assert.match(visual,/stationObj/)});

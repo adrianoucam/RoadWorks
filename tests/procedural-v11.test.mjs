@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {createComponent,componentPreview,componentRecipeJSON,COMPONENTS} from '../src/procedural.mjs';
+import {buildAlignment} from '../src/cad.mjs';
+test('Biblioteca disponibiliza quatro componentes editáveis',()=>assert.equal(COMPONENTS.length,4));
+test('Reta procedural produz segmento CAD de comprimento idêntico',()=>{const c=createComponent('straight',{length:120});assert.equal(c.segments.length,1);assert.equal(c.lengthMeters,120);assert.equal(c.segments[0].type,'line')});
+test('Curva com duas clotóides tem curvatura contínua nas junções',()=>{const c=createComponent('curve',{length:190,radius:90,transition:30});assert.deepEqual(c.segments.map(s=>s.type),['clothoid','arc','clothoid']);assert.equal(c.segments[0].k1,c.segments[1].curvature);assert.equal(c.segments[2].k0,c.segments[1].curvature);assert.equal(c.segments[2].k1,0)});
+test('Curva reversa mantém curvatura nula na reversão',()=>{const c=createComponent('reverse',{length:240,radius:100,transition:25});assert.equal(c.segments[2].k1,0);assert.equal(c.segments[3].k0,0);assert.ok(c.segments[3].k1<0)});
+test('Componente acesso inclui aproximação e concordância',()=>{const c=createComponent('access',{length:160,radius:75,transition:25});assert.deepEqual(c.segments.map(s=>s.type),['line','clothoid','arc'])});
+test('Comprimentos e requisitos inválidos são rejeitados',()=>{assert.throws(()=>createComponent('curve',{length:40,transition:30}));assert.throws(()=>createComponent('reverse',{length:80,transition:25}));assert.throws(()=>createComponent('unknown'));});
+test('Posicionamento rotacionado mantém alinhamento e comprimento',()=>{const c=createComponent('curve',{length:140,radius:100,transition:20}),p=componentPreview(c,{x:50,y:80,heading:Math.PI/2});assert.equal(p[0].x,50);assert.equal(p[0].y,80);assert.ok(Math.abs(p.at(-1).station-140)<1e-7)});
+test('Receita JSON mantém parâmetros e indicação não normativa',()=>{const c=createComponent('straight'),j=JSON.parse(componentRecipeJSON(c));assert.equal(j.schema,'roadworks-component/1.1');assert.equal(j.normative,false)});
